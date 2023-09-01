@@ -19,7 +19,7 @@
 
 ###
 
-<h3 align="left">👩‍💻  Eyo, that's me:  👋</h3>
+<h3 align="left"> 👩‍💻  Eyo, that's me:  👋</h3>
 
 ###
 
