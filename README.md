@@ -8,11 +8,11 @@
 
 ###
 
-<h3 align="left"> 👩‍💻  Eyo, that's me:  👋</h3>
+<h3 align="left"> Eyo, that's me:  👋</h3>
 
 ###
 
-<p align="left">I'm Michael from Germany.  <br><br>- 🔭 I’ve just started working as a Frontend Web Developer.<br>- 📚 I'm currently learning React and TypeScript.<br>- ⚡ In my free time I enjoy doing sports and playing video games.</p>
+<p align="left">I'm Michael from Germany.  <br><br>- 👩‍💻 I finished my bachelor's degree in media technology with a specialisation in media informatics very successfully <br>- 🔭 I’ve just started working as a Frontend Web Developer.<br>- 📚 I'm currently learning React and TypeScript.<br>- ⚡ In my free time I enjoy doing sports and playing video games.</p>
 
 ###
 
