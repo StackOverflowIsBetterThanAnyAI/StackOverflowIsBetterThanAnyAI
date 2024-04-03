@@ -12,7 +12,7 @@
 
 ###
 
-<p align="left">I'm Michael from Germany.  <br><br>- 🔭 I’ve just started working as a Frontend Web Developer.<br>- 📚 I'm currently learning TypeScript, and focussing on React and TypeScript.<br>- ⚡ In my free time I enjoy doing sports and playing video games.</p>
+<p align="left">I'm Michael from Germany.  <br><br>- 🔭 I’ve just started working as a Frontend Web Developer.<br>- 📚 I'm currently learning React and TypeScript.<br>- ⚡ In my free time I enjoy doing sports and playing video games.</p>
 
 ###
 
