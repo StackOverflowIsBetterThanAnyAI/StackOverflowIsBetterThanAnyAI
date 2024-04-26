@@ -12,11 +12,23 @@
 
 ###
 
-<p align="left">I'm Michael from Germany.  <br><br>- 👩‍💻 I finished my bachelor's degree in media technology with a specialisation in media informatics very successfully. <br>- 🔭 I’ve just started working as a Frontend Web Developer: Practice makes perfect.<br>- 📚 I'm currently learning React and TypeScript.<br>- ⚡ In my free time I enjoy doing sports and playing video games.</p>
+<p align="left">I'm Michael from Germany. <br><br>- 👩‍💻 I finished my bachelor's degree in media technology with a specialisation in media informatics very successfully. <br>- 🔭 I’ve just started working as a Frontend Web Developer: Practice makes perfect.<br>- 📚 I'm currently learning React and TypeScript.<br>- ⚡ In my free time I enjoy doing sports and playing video games.</p>
 
 ###
 
-<h3 align="left">🛠I have already gained experience working with:</h3>
+![Michael's GitHub stats](https://github-readme-stats.vercel.app/api?username=StackOverflowIsBetterThanAnyAI&show=reviews&show_icons=true&include_all_commits=true)
+
+###
+
+<h3 align="left">🏆 These are my most commonly used technologies:</h3>
+
+###
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=StackOverflowIsBetterThanAnyAI&layout=compact)
+
+###
+
+<h3 align="left">🛠 I have already gained experience working with:</h3>
 
 ###
 
