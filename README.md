@@ -64,7 +64,7 @@
 
 ###
 
-👨‍💻 I am also actively coding on CodeWars:
+<h3 align="left">👨‍💻 I am also actively coding on CodeWars:</h3>
 
 ###
 
