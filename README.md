@@ -63,3 +63,9 @@
 </div>
 
 ###
+
+👨‍💻 I am also actively coding on CodeWars:
+
+###
+
+![Michael's CodeWars stats](https://www.codewars.com/users/muenzi01/badges/large)
