@@ -57,6 +57,8 @@ jobs:
 
             - name: Debug Output
               run: |
+                  echo "Content of README.md:"
+                  cat README.md
                   echo "New Username: $USERNAME"
                   echo "New Honor: $HONOR"
                   echo "New Overall Rank: $OVERALL_RANK"
