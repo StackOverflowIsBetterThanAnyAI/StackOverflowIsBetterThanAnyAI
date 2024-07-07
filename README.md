@@ -68,5 +68,5 @@
 
 -   **Username**: muenzi01
 -   **Honor**: 1912
--   **Rank**: <!-- CODEWARS_RANK -->
--   **Score**: <!-- CODEWARS_SCORE -->
+-   **Rank**: <!-- CODEWARS_OVERALL_RANK -->
+-   **Score**: <!-- CODEWARS_OVERALL_SCORE -->
