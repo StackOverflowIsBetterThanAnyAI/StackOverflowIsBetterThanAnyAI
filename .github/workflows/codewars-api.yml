@@ -40,3 +40,10 @@ jobs:
                   git config --local user.name "GitHub Action"
                   git add README.md
                   git diff --quiet && git diff --staged --quiet || (git commit -m "Update README with Codewars stats" && git push)
+
+            - name: Debug Output
+              run: |
+                  echo "New Username: $USERNAME"
+                  echo "New Honor: $HONOR"
+                  echo "New Overall Rank: $OVERALL_RANK"
+                  echo "New Overall Score: $OVERALL_SCORE"
