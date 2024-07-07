@@ -31,23 +31,22 @@ jobs:
                     exit 1
                   fi
 
-                  USERNAME=$(jq -r '.username // empty' codewars.json)
-                  HONOR=$(jq -r '.honor // empty' codewars.json)
-                  OVERALL_RANK=$(jq -r '.ranks.overall.name // empty' codewars.json)
-                  OVERALL_SCORE=$(jq -r '.ranks.overall.score // empty' codewars.json)
-                  echo "$USERNAME"
+                  echo "CW_USERNAME=$(jq -r '.username // empty' codewars.json)" >> $GITHUB_ENV
+                  echo "CW_HONOR=$(jq -r '.honor // empty' codewars.json)" >> $GITHUB_ENV
+                  echo "CW_RANK=$(jq -r '.ranks.overall.name // empty' codewars.json)" >> $GITHUB_ENV
+                  echo "CW_SCORE=$(jq -r '.ranks.overall.score // empty' codewars.json)" >> $GITHUB_ENV
 
-                  if [ -z "$USERNAME" ] || [ -z "$HONOR" ] || [ -z "$OVERALL_RANK" ] || [ -z "$OVERALL_SCORE" ]; then
+                  if [ -z "$CW_USERNAME" ] || [ -z "$CW_HONOR" ] || [ -z "$CW_RANK" ] || [ -z "$CW_SCORE" ]; then
                     echo "Error: Failed to extract data from codewars.json"
                     echo "Content of codewars.json:"
                     cat codewars.json
                     exit 1
                   fi
 
-                    sed -i 's/\(<!-- CODEWARS_USERNAME -->\).*\(<!-- CODEWARS_USERNAME -->\)/\1 '"$USERNAME"' \2/' README.md
-                    sed -i 's/\(<!-- CODEWARS_HONOR -->\).*\(<!-- CODEWARS_HONOR -->\)/\1 '"$HONOR"' \2/' README.md
-                    sed -i 's/\(<!-- CODEWARS_OVERALL_RANK -->\).*\(<!-- CODEWARS_OVERALL_RANK -->\)/\1 '"$OVERALL_RANK"' \2/' README.md
-                    sed -i 's/\(<!-- CODEWARS_OVERALL_SCORE -->\).*\(<!-- CODEWARS_OVERALL_SCORE -->\)/\1 '"$OVERALL_SCORE"' \2/' README.md
+                  sed -i 's/\(<!-- CODEWARS_USERNAME -->\).*\(<!-- CODEWARS_USERNAME -->\)/\1 '"$CW_USERNAME"' \2/' README.md
+                  sed -i 's/\(<!-- CODEWARS_HONOR -->\).*\(<!-- CODEWARS_HONOR -->\)/\1 '"$CW_HONOR"' \2/' README.md
+                  sed -i 's/\(<!-- CODEWARS_OVERALL_RANK -->\).*\(<!-- CODEWARS_OVERALL_RANK -->\)/\1 '"$CW_RANK"' \2/' README.md
+                  sed -i 's/\(<!-- CODEWARS_OVERALL_SCORE -->\).*\(<!-- CODEWARS_OVERALL_SCORE -->\)/\1 '"$CW_SCORE"' \2/' README.md
 
             - name: Commit and Push Changes
               run: |
@@ -60,7 +59,7 @@ jobs:
               run: |
                   echo "Content of README.md:"
                   cat README.md
-                  echo "New Username: $USERNAME"
-                  echo "New Honor: $HONOR"
-                  echo "New Overall Rank: $OVERALL_RANK"
-                  echo "New Overall Score: $OVERALL_SCORE"
+                  echo "New Username: ${{ env.CW_USERNAME }}"
+                  echo "New Honor: ${{ env.CW_HONOR }}"
+                  echo "New Overall Rank: ${{ env.CW_RANK }}"
+                  echo "New Overall Score: ${{ env.CW_SCORE }}"
