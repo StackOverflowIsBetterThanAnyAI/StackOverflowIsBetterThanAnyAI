@@ -36,12 +36,9 @@ jobs:
 
             - name: Commit and Push Changes
               run: |
-                  if [ -f codewars.json ]; then
-                    git rm -f codewars.json
-                  fi
                   git pull
                   git config --local user.email "action@github.com"
                   git config --local user.name "GitHub Action"
-                  git add README.md
+                  git add .
                   git commit -m "Update README with Codewars stats"
                   git push
