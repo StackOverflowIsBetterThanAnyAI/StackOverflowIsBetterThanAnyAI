@@ -29,11 +29,10 @@ jobs:
                   OVERALL_RANK=$(jq -r '.ranks.overall.name' codewars.json)
                   OVERALL_SCORE=$(jq -r '.ranks.overall.score' codewars.json)
 
-                  # Replace placeholders in README.md with current values
-                  sed -i "s/<!-- CODEWARS_USERNAME -->.*/<!-- CODEWARS_USERNAME --> ${USERNAME} <!-- CODEWARS_USERNAME -->/g" README.md
-                  sed -i "s/<!-- CODEWARS_HONOR -->.*/<!-- CODEWARS_HONOR --> ${HONOR} <!-- CODEWARS_HONOR -->/g" README.md
-                  sed -i "s/<!-- CODEWARS_OVERALL_RANK -->.*/<!-- CODEWARS_OVERALL_RANK --> ${OVERALL_RANK} <!-- CODEWARS_OVERALL_RANK -->/g" README.md
-                  sed -i "s/<!-- CODEWARS_OVERALL_SCORE -->.*/<!-- CODEWARS_OVERALL_SCORE --> ${OVERALL_SCORE} <!-- CODEWARS_OVERALL_SCORE -->/g" README.md
+                  sed -i 's/\(<!-- CODEWARS_USERNAME -->\).*\(<!-- CODEWARS_USERNAME -->\)/\1 '"$USERNAME"' \2/' README.md
+                  sed -i 's/\(<!-- CODEWARS_HONOR -->\).*\(<!-- CODEWARS_HONOR -->\)/\1 '"$HONOR"' \2/' README.md
+                  sed -i 's/\(<!-- CODEWARS_OVERALL_RANK -->\).*\(<!-- CODEWARS_OVERALL_RANK -->\)/\1 '"$OVERALL_RANK"' \2/' README.md
+                  sed -i 's/\(<!-- CODEWARS_OVERALL_SCORE -->\).*\(<!-- CODEWARS_OVERALL_SCORE -->\)/\1 '"$OVERALL_SCORE"' \2/' README.md
 
             - name: Commit and Push Changes
               run: |
