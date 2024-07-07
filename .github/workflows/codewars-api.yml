@@ -1,8 +1,8 @@
-name: Update README
+name: Update README with Codewars Stats
 
 on:
     schedule:
-        - cron: '15 19 * * *'
+        - cron: '30 19 * * *'
     push:
         branches:
             - main
@@ -13,7 +13,7 @@ jobs:
 
         steps:
             - name: Checkout Repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v2
 
             - name: Fetch Codewars Data
               id: fetch_codewars
@@ -48,3 +48,5 @@ jobs:
                   git add README.md
                   git commit -m "Update README with Codewars stats"
                   git push
+              env:
+                  GITHUB_TOKEN: ${{ secrets.PAT_FOR_GITHUB_ACTIONS }}
