@@ -26,15 +26,27 @@ jobs:
             - name: Extract Data from Codewars
               id: extract_data
               run: |
-                  USERNAME=$(jq -r '.username' codewars.json)
-                  HONOR=$(jq -r '.honor' codewars.json)
-                  OVERALL_RANK=$(jq -r '.ranks.overall.name' codewars.json)
-                  OVERALL_SCORE=$(jq -r '.ranks.overall.score' codewars.json)
+                  if [ ! -f codewars.json ]; then
+                    echo "Error: codewars.json file not found"
+                    exit 1
+                  fi
 
-                  sed -i 's/\(<!-- CODEWARS_USERNAME -->\).*\(<!-- CODEWARS_USERNAME -->\)/\1 '"$USERNAME"' \2/' README.md
-                  sed -i 's/\(<!-- CODEWARS_HONOR -->\).*\(<!-- CODEWARS_HONOR -->\)/\1 '"$HONOR"' \2/' README.md
-                  sed -i 's/\(<!-- CODEWARS_OVERALL_RANK -->\).*\(<!-- CODEWARS_OVERALL_RANK -->\)/\1 '"$OVERALL_RANK"' \2/' README.md
-                  sed -i 's/\(<!-- CODEWARS_OVERALL_SCORE -->\).*\(<!-- CODEWARS_OVERALL_SCORE -->\)/\1 '"$OVERALL_SCORE"' \2/' README.md
+                  USERNAME=$(jq -r '.username // empty' codewars.json)
+                  HONOR=$(jq -r '.honor // empty' codewars.json)
+                  OVERALL_RANK=$(jq -r '.ranks.overall.name // empty' codewars.json)
+                  OVERALL_SCORE=$(jq -r '.ranks.overall.score // empty' codewars.json)
+
+                  if [ -z "$USERNAME" ] || [ -z "$HONOR" ] || [ -z "$OVERALL_RANK" ] || [ -z "$OVERALL_SCORE" ]; then
+                    echo "Error: Failed to extract data from codewars.json"
+                    echo "Content of codewars.json:"
+                    cat codewars.json
+                    exit 1
+                  fi
+
+                    sed -i 's/\(<!-- CODEWARS_USERNAME -->\).*\(<!-- CODEWARS_USERNAME -->\)/\1 '"$USERNAME"' \2/' README.md
+                    sed -i 's/\(<!-- CODEWARS_HONOR -->\).*\(<!-- CODEWARS_HONOR -->\)/\1 '"$HONOR"' \2/' README.md
+                    sed -i 's/\(<!-- CODEWARS_OVERALL_RANK -->\).*\(<!-- CODEWARS_OVERALL_RANK -->\)/\1 '"$OVERALL_RANK"' \2/' README.md
+                    sed -i 's/\(<!-- CODEWARS_OVERALL_SCORE -->\).*\(<!-- CODEWARS_OVERALL_SCORE -->\)/\1 '"$OVERALL_SCORE"' \2/' README.md
 
             - name: Commit and Push Changes
               run: |
