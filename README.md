@@ -66,7 +66,11 @@
 
 ## Codewars Stats
 
--   **Username**: muenzi01 <!-- CODEWARS_USERNAME -->
--   **Honor**: 1915 <!-- CODEWARS_HONOR -->
--   **Rank**: 4 kyu <!-- CODEWARS_OVERALL_RANK -->
--   **Score**: 1487 <!-- CODEWARS_OVERALL_SCORE -->
+-   **Username**: muenzi01 <!-- CODEWARS_USERNAME --> muenzi01 <!-- CODEWARS_USERNAME -->
+-   **Honor**: 1915 <!-- CODEWARS_HONOR --> 1915 <!-- CODEWARS_HONOR -->
+-   **Rank**: 4 kyu <!-- CODEWARS_OVERALL_RANK --> 4 kyu <!-- CODEWARS_OVERALL_RANK -->
+-   **Score**: 1487 <!-- CODEWARS_OVERALL_SCORE --> 1487 <!-- CODEWARS_OVERALL_SCORE -->
+-   **Username**: muenzi01 muenzi01 muenzi01 muenzi01 <!-- CODEWARS_USERNAME --> muenzi01 <!-- CODEWARS_USERNAME -->
+-   **Honor**: 1912 1915 1915 1915 <!-- CODEWARS_HONOR --> 1915 <!-- CODEWARS_HONOR -->
+-   **Rank**: 4 kyu 4 kyu 4 kyu 4 kyu <!-- CODEWARS_OVERALL_RANK --> 4 kyu <!-- CODEWARS_OVERALL_RANK -->
+-   **Score**: 1484 1487 1487 1487 <!-- CODEWARS_OVERALL_SCORE --> 1487 <!-- CODEWARS_OVERALL_SCORE -->
