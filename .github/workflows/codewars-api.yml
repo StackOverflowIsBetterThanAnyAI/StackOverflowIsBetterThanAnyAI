@@ -20,6 +20,8 @@ jobs:
               run: |
                   API_RESPONSE=$(curl -s https://www.codewars.com/api/v1/users/muenzi01)
                   echo "$API_RESPONSE" > codewars.json
+                  echo "API Response:"
+                  cat codewars.json
 
             - name: Extract Data from Codewars
               id: extract_data
