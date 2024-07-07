@@ -66,7 +66,7 @@
 
 ## Codewars Stats
 
--   **Username**: <!-- CODEWARS_USERNAME -->
--   **Honor**: <!-- CODEWARS_HONOR -->
+-   **Username**: muenzi01
+-   **Honor**: 1912
 -   **Rank**: <!-- CODEWARS_RANK -->
 -   **Score**: <!-- CODEWARS_SCORE -->
