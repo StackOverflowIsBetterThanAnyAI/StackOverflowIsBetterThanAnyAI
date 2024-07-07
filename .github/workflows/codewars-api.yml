@@ -37,7 +37,7 @@ jobs:
             - name: Commit and Push Changes
               run: |
                   if [ -f codewars.json ]; then
-                  it rm -f codewars.json
+                    git rm -f codewars.json
                   fi
                   git pull
                   git config --local user.email "action@github.com"
