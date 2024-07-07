@@ -31,15 +31,25 @@ jobs:
                     exit 1
                   fi
 
-                  echo "CW_USERNAME=$(jq -r '.username // empty' codewars.json)" >> $GITHUB_ENV
-                  echo "CW_HONOR=$(jq -r '.honor // empty' codewars.json)" >> $GITHUB_ENV
-                  echo "CW_RANK=$(jq -r '.ranks.overall.name // empty' codewars.json)" >> $GITHUB_ENV
-                  echo "CW_SCORE=$(jq -r '.ranks.overall.score // empty' codewars.json)" >> $GITHUB_ENV
+                  CW_USERNAME=$(jq -r '.username // empty' codewars.json)
+                  CW_HONOR=$(jq -r '.honor // empty' codewars.json)
+                  CW_RANK=$(jq -r '.ranks.overall.name // empty' codewars.json)
+                  CW_SCORE=$(jq -r '.ranks.overall.score // empty' codewars.json)
+
+                  echo "CW_USERNAME=$CW_USERNAME" >> $GITHUB_ENV
+                  echo "CW_HONOR=$CW_HONOR" >> $GITHUB_ENV
+                  echo "CW_RANK=$CW_RANK" >> $GITHUB_ENV
+                  echo "CW_SCORE=$CW_SCORE" >> $GITHUB_ENV
 
                   if [ -z "$CW_USERNAME" ] || [ -z "$CW_HONOR" ] || [ -z "$CW_RANK" ] || [ -z "$CW_SCORE" ]; then
                     echo "Error: Failed to extract data from codewars.json"
                     echo "Content of codewars.json:"
                     cat codewars.json
+                    echo "Extracted values:"
+                    echo "Username: $CW_USERNAME"
+                    echo "Honor: $CW_HONOR"
+                    echo "Rank: $CW_RANK"
+                    echo "Score: $CW_SCORE"
                     exit 1
                   fi
 
