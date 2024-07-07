@@ -2,7 +2,7 @@ name: Update README
 
 on:
     schedule:
-        - cron: '0 19 * * *'
+        - cron: '15 19 * * *'
     push:
         branches:
             - main
@@ -29,17 +29,17 @@ jobs:
                   OVERALL_RANK=$(jq -r '.ranks.overall.name' codewars.json)
                   OVERALL_SCORE=$(jq -r '.ranks.overall.score' codewars.json)
 
-                  echo "USERNAME=$USERNAME" >> $GITHUB_ENV
-                  echo "HONOR=$HONOR" >> $GITHUB_ENV
-                  echo "OVERALL_RANK=$OVERALL_RANK" >> $GITHUB_ENV
-                  echo "OVERALL_SCORE=$OVERALL_SCORE" >> $GITHUB_ENV
+                  echo "USERNAME=${USERNAME}" >> $GITHUB_ENV
+                  echo "HONOR=${HONOR}" >> $GITHUB_ENV
+                  echo "OVERALL_RANK=${OVERALL_RANK}" >> $GITHUB_ENV
+                  echo "OVERALL_SCORE=${OVERALL_SCORE}" >> $GITHUB_ENV
 
             - name: Update README
               run: |
-                  sed -i "s/<!-- CODEWARS_USERNAME -->/${{ env.USERNAME }}/g" README.md
-                  sed -i "s/<!-- CODEWARS_HONOR -->/${{ env.HONOR }}/g" README.md
-                  sed -i "s/<!-- CODEWARS_OVERALL_RANK -->/${{ env.OVERALL_RANK }}/g" README.md
-                  sed -i "s/<!-- CODEWARS_OVERALL_SCORE -->/${{ env.OVERALL_SCORE }}/g" README.md
+                  sed -i "s/<!-- CODEWARS_USERNAME -->/${USERNAME}/g" README.md
+                  sed -i "s/<!-- CODEWARS_HONOR -->/${HONOR}/g" README.md
+                  sed -i "s/<!-- CODEWARS_OVERALL_RANK -->/${OVERALL_RANK}/g" README.md
+                  sed -i "s/<!-- CODEWARS_OVERALL_SCORE -->/${OVERALL_SCORE}/g" README.md
 
             - name: Commit and Push Changes
               run: |
