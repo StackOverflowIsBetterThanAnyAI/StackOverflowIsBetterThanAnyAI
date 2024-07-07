@@ -63,3 +63,10 @@
 ###
 
 ![Michael's CodeWars stats](https://www.codewars.com/users/muenzi01/badges/large)
+
+## Codewars Stats
+
+-   **Username**: <!-- CODEWARS_USERNAME -->
+-   **Honor**: <!-- CODEWARS_HONOR -->
+-   **Rank**: <!-- CODEWARS_RANK -->
+-   **Score**: <!-- CODEWARS_SCORE -->

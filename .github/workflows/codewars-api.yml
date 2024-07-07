@@ -1,0 +1,50 @@
+name: Update README
+
+on:
+    schedule:
+        - cron: '0 22 * * *'
+    push:
+        branches:
+            - main
+
+jobs:
+    update-readme:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v2
+
+            - name: Fetch Codewars Data
+              id: fetch_codewars
+              run: |
+                  API_RESPONSE=$(curl -s https://www.codewars.com/api/v1/users/muenzi01)
+                  echo "$API_RESPONSE" > codewars.json
+
+            - name: Extract Data from Codewars
+              id: extract_data
+              run: |
+                  USERNAME=$(jq -r '.username' codewars.json)
+                  HONOR=$(jq -r '.honor' codewars.json)
+                  OVERALL_RANK=$(jq -r '.ranks.overall.name' codewars.json)
+                  OVERALL_SCORE=$(jq -r '.ranks.overall.score' codewars.json)
+
+                  echo "USERNAME=$USERNAME" >> $GITHUB_ENV
+                  echo "HONOR=$HONOR" >> $GITHUB_ENV
+                  echo "OVERALL_RANK=$OVERALL_RANK" >> $GITHUB_ENV
+                  echo "OVERALL_SCORE=$OVERALL_SCORE" >> $GITHUB_ENV
+
+            - name: Update README
+              run: |
+                  sed -i "s/<!-- CODEWARS_USERNAME -->/${{ env.USERNAME }}/g" README.md
+                  sed -i "s/<!-- CODEWARS_HONOR -->/${{ env.HONOR }}/g" README.md
+                  sed -i "s/<!-- CODEWARS_OVERALL_RANK -->/${{ env.OVERALL_RANK }}/g" README.md
+                  sed -i "s/<!-- CODEWARS_OVERALL_SCORE -->/${{ env.OVERALL_SCORE }}/g" README.md
+
+            - name: Commit and Push Changes
+              run: |
+                  git config --local user.email "action@github.com"
+                  git config --local user.name "GitHub Action"
+                  git add README.md
+                  git commit -m "Update README with Codewars stats"
+                  git push
