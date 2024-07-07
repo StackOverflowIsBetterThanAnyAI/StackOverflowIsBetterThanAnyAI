@@ -48,5 +48,3 @@ jobs:
                   git add README.md
                   git commit -m "Update README with Codewars stats"
                   git push
-              env:
-                  GITHUB_TOKEN: ${{ secrets.PAT_FOR_GITHUB_ACTIONS }}
