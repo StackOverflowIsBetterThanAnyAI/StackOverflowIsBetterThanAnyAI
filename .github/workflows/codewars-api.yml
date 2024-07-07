@@ -35,6 +35,7 @@ jobs:
                   HONOR=$(jq -r '.honor // empty' codewars.json)
                   OVERALL_RANK=$(jq -r '.ranks.overall.name // empty' codewars.json)
                   OVERALL_SCORE=$(jq -r '.ranks.overall.score // empty' codewars.json)
+                  echo "$USERNAME"
 
                   if [ -z "$USERNAME" ] || [ -z "$HONOR" ] || [ -z "$OVERALL_RANK" ] || [ -z "$OVERALL_SCORE" ]; then
                     echo "Error: Failed to extract data from codewars.json"
