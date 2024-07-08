@@ -66,7 +66,7 @@ jobs:
                   sed -i 's/\*\*Username\*\*: [a-zA-Z0-9]* <!-- CODEWARS_USERNAME -->/\*\*Username\*\*: '"$CW_USERNAME"' <!-- CODEWARS_USERNAME -->/' README.md
                   sed -i 's/\*\*Honor\*\*: [0-9]* <!-- CODEWARS_HONOR -->/\*\*Honor\*\*: '"$CW_HONOR"' <!-- CODEWARS_HONOR -->/' README.md
                   sed -i 's/\*\*Rank\*\*:.*<!-- CODEWARS_OVERALL_RANK -->/\*\*Rank\*\*: '"$CW_RANK"' <!-- CODEWARS_OVERALL_RANK -->/' README.md
-                  sed -i 's/\*\*Score\*\*: [a-zA-Z\d\.%\s]* <!-- CODEWARS_OVERALL_SCORE -->/\*\*Score\*\*: '"$CW_SCORE_PERCENT"' <!-- CODEWARS_OVERALL_SCORE -->/' README.md
+                  sed -i 's/\*\*Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Score\*\*: '"$CW_SCORE_PERCENT"' <!-- CODEWARS_OVERALL_SCORE -->/' README.md
 
             - name: Commit and Push Changes
               run: |
