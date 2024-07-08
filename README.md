@@ -77,7 +77,8 @@
 <h3 align="left">#️⃣ Language Ranks:</h3>
 
 <!-- CODEWARS_LANGUAGE_RANKS -->
-* javascript: 4 kyu (Score: 1433)<br/>
-* java: 8 kyu (Score: 6)<br/>
-* typescript: 6 kyu (Score: 100)<br/>
-* c: 8 kyu (Score: 10)<br/>
+
+-   javascript: 4 kyu (Score: 1433)<br/>
+-   java: 8 kyu (Score: 6)<br/>
+-   typescript: 6 kyu (Score: 100)<br/>
+-   c: 8 kyu (Score: 10)<br/>
