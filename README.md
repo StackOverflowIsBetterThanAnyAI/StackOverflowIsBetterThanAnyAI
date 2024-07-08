@@ -68,7 +68,7 @@
 
 -   **Username**: muenzi01 <!-- CODEWARS_USERNAME -->
 
--   **Honor**: 1919 <!-- CODEWARS_HONOR -->
+-   **Honor**: 1928 <!-- CODEWARS_HONOR -->
 
 -   **Rank**: 4 kyu <!-- CODEWARS_OVERALL_RANK -->
 
@@ -77,7 +77,10 @@
 <h3 align="left">#️⃣ Language Ranks:</h3>
 
 <!-- CODEWARS_LANGUAGE_RANKS -->
-* **javascript**: 4 kyu (Score: 1433)
 * **java**: 8 kyu (Score: 6)
 * **typescript**: 6 kyu (Score: 100)
 * **c**: 8 kyu (Score: 10)
+* **javascript**: 4 kyu (Score: 1439)
+* **java**: 8 kyu (Score: 6)
+* **typescript**: 6 kyu (Score: 104)
+* **c**: 8 kyu (Score: 12)
