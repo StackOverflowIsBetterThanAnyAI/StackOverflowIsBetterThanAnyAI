@@ -35,7 +35,7 @@ jobs:
                   CW_HONOR=$(jq -r '.honor // empty' codewars.json)
                   CW_RANK=$(jq -r '.ranks.overall.name // empty' codewars.json)
                   CW_SCORE=$(jq -r '.ranks.overall.score // empty' codewars.json)
-                  LANG_RANKS=$(jq -r '.ranks.languages | to_entries[] | "\* \(.key): \(.value.name) (Score: \(.value.score))<br/>"' codewars.json | tr -d '\n')
+                  LANG_RANKS=$(jq -r '.ranks.languages | to_entries[] | "* \(.key): \(.value.name) (Score: \(.value.score))"' codewars.json)
 
                   echo "CW_USERNAME=$CW_USERNAME" >> $GITHUB_ENV
                   echo "CW_HONOR=$CW_HONOR" >> $GITHUB_ENV
@@ -64,10 +64,15 @@ jobs:
 
                   if grep -q "<!-- CODEWARS_LANGUAGE_RANKS -->" README.md; then
                       sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/{n;d}' README.md
-                      sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/r lang_ranks.txt' README.md
+                      echo -e "\n### Language Ranks:\n<!-- CODEWARS_LANGUAGE_RANKS -->" >> README.md
+                      while IFS= read -r line; do
+                          echo "* $line" >> README.md
+                      done < lang_ranks.txt
                   else
                       echo -e "\n### Language Ranks:\n<!-- CODEWARS_LANGUAGE_RANKS -->" >> README.md
-                      cat lang_ranks.txt >> README.md
+                      while IFS= read -r line; do
+                          echo "* $line" >> README.md
+                      done < lang_ranks.txt
                   fi
 
             - name: Commit and Push Changes
