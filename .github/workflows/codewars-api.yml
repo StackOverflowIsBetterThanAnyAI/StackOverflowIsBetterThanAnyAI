@@ -41,7 +41,7 @@ jobs:
                   echo "CW_HONOR=$CW_HONOR" >> $GITHUB_ENV
                   echo "CW_RANK=$CW_RANK" >> $GITHUB_ENV
                   echo "CW_SCORE=$CW_SCORE" >> $GITHUB_ENV
-                  echo "LANG_RANKS=$LANG_RANKS" >> $GITHUB_ENV
+                  echo "LANG_RANKS=$LANG_RANKS" >> lang_ranks.txt
 
                   if [ -z "$CW_USERNAME" ] || [ -z "$CW_HONOR" ] || [ -z "$CW_RANK" ] || [ -z "$CW_SCORE" ]; then
                     echo "Error: Failed to extract data from codewars.json"
@@ -63,9 +63,11 @@ jobs:
                   sed -i 's/\*\*Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Score\*\*: '"$CW_SCORE"' <!-- CODEWARS_OVERALL_SCORE -->/' README.md
 
                   if grep -q "<!-- CODEWARS_LANGUAGE_RANKS -->" README.md; then
-                      sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/!b;n;c- '"$LANG_RANKS" README.md
+                      sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/!b;n;c' README.md
+                      cat lang_ranks.txt >> README.md
                   else
-                      echo -e "\n### Language Ranks:\n- $LANG_RANKS <!-- CODEWARS_LANGUAGE_RANKS -->" >> README.md
+                      echo -e "\n### Language Ranks:\n<!-- CODEWARS_LANGUAGE_RANKS -->" >> README.md
+                      cat lang_ranks.txt >> README.md
                   fi
 
             - name: Commit and Push Changes
@@ -83,4 +85,5 @@ jobs:
                   echo "New Honor: ${{ env.CW_HONOR }}"
                   echo "New Overall Rank: ${{ env.CW_RANK }}"
                   echo "New Overall Score: ${{ env.CW_SCORE }}"
-                  echo "New Language Ranks: ${{ env.LANG_RANKS }}"
+                  echo "New Language Ranks:"
+                  cat lang_ranks.txt
