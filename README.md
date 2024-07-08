@@ -64,7 +64,7 @@
 
 ![Michael's CodeWars stats](https://www.codewars.com/users/muenzi01/badges/large)
 
-## Codewars Stats
+<h3 align="left">📊 Codewars Stats:</h3>
 
 -   **Username**: muenzi01 <!-- CODEWARS_USERNAME -->
 -   **Honor**: 1916 <!-- CODEWARS_HONOR -->
