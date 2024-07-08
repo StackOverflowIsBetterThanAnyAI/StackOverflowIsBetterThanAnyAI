@@ -67,6 +67,6 @@
 ## Codewars Stats
 
 -   **Username**: muenzi01 <!-- CODEWARS_USERNAME -->
--   **Honor**: 191 <!-- CODEWARS_HONOR -->
+-   **Honor**: 1916 <!-- CODEWARS_HONOR -->
 -   **Rank**: 4 kyu <!-- CODEWARS_OVERALL_RANK -->
 -   **Score**: 1487 <!-- CODEWARS_OVERALL_SCORE -->
