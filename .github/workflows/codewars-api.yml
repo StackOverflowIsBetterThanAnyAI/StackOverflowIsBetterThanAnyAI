@@ -65,7 +65,7 @@ jobs:
                   sed -i 's/\*\*Overall Rank\*\*:.*<!-- CODEWARS_OVERALL_RANK -->/\*\*Rank\*\*: '"$CW_RANK"' <!-- CODEWARS_OVERALL_RANK -->/' README.md
                   sed -i 's/\*\*Overall Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Score\*\*: '"$CW_SCORE"' <!-- CODEWARS_OVERALL_SCORE -->/' README.md
 
-                  sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/{n;d}' README.md
+                  sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/{n;:a;N;s/\n//;ba}' README.md
                   sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/r lang_ranks.md' README.md
 
             - name: Commit and Push Changes
