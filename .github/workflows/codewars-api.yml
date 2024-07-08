@@ -35,11 +35,13 @@ jobs:
                   CW_HONOR=$(jq -r '.honor // empty' codewars.json)
                   CW_RANK=$(jq -r '.ranks.overall.name // empty' codewars.json)
                   CW_SCORE=$(jq -r '.ranks.overall.score // empty' codewars.json)
+                  LANG_RANKS=$(jq -r '.ranks.languages | to_entries[] | "\(.key):\(.value.name) (Score: \(.value.score))"' codewars.json)
 
                   echo "CW_USERNAME=$CW_USERNAME" >> $GITHUB_ENV
                   echo "CW_HONOR=$CW_HONOR" >> $GITHUB_ENV
                   echo "CW_RANK=$CW_RANK" >> $GITHUB_ENV
                   echo "CW_SCORE=$CW_SCORE" >> $GITHUB_ENV
+                  echo "LANG_RANKS=$LANG_RANKS" >> $GITHUB_ENV
 
                   if [ -z "$CW_USERNAME" ] || [ -z "$CW_HONOR" ] || [ -z "$CW_RANK" ] || [ -z "$CW_SCORE" ]; then
                     echo "Error: Failed to extract data from codewars.json"
@@ -60,6 +62,12 @@ jobs:
                   sed -i 's/\*\*Rank\*\*:.*<!-- CODEWARS_OVERALL_RANK -->/\*\*Rank\*\*: '"$CW_RANK"' <!-- CODEWARS_OVERALL_RANK -->/' README.md
                   sed -i 's/\*\*Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Score\*\*: '"$CW_SCORE"' <!-- CODEWARS_OVERALL_SCORE -->/' README.md
 
+                  if grep -q "<!-- CODEWARS_LANGUAGE_RANKS -->" README.md; then
+                      sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/!b;n;c- '"$LANG_RANKS" README.md
+                  else
+                      echo -e "\n### Language Ranks:\n- $LANG_RANKS <!-- CODEWARS_LANGUAGE_RANKS -->" >> README.md
+                  fi
+
             - name: Commit and Push Changes
               run: |
                   git config --local user.email "action@github.com"
@@ -75,3 +83,4 @@ jobs:
                   echo "New Honor: ${{ env.CW_HONOR }}"
                   echo "New Overall Rank: ${{ env.CW_RANK }}"
                   echo "New Overall Score: ${{ env.CW_SCORE }}"
+                  echo "New Language Ranks: ${{ env.LANG_RANKS }}"

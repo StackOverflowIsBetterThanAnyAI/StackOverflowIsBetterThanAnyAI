@@ -67,6 +67,13 @@
 <h3 align="left">📊 Codewars Stats:</h3>
 
 -   **Username**: muenzi01 <!-- CODEWARS_USERNAME -->
+
 -   **Honor**: 1919 <!-- CODEWARS_HONOR -->
+
 -   **Rank**: 4 kyu <!-- CODEWARS_OVERALL_RANK -->
+
 -   **Score**: 1489 <!-- CODEWARS_OVERALL_SCORE -->
+
+<h3 align="left">Language Ranks:</h3>
+
+-   Language: Rank (Score) <!-- CODEWARS_LANGUAGE_RANKS -->
