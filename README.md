@@ -78,9 +78,7 @@
 
 <!-- CODEWARS_LANGUAGE_RANKS -->
 
--   **javascript**: 4 kyu (Score: 1443)
--   **java**: 8 kyu (Score: 8)
--   **typescript**: 6 kyu (Score: 106)
--   **c**: 8 kyu (Score: 12)
-
-*   **javascript**: 4 kyu (Score: 1443)- **java**: 8 kyu (Score: 8)- **typescript**: 6 kyu (Score: 106)- **c**: 8 kyu (Score: 12)
+* **javascript**: 4 kyu (Score: 1443)
+* **java**: 8 kyu (Score: 8)
+* **typescript**: 6 kyu (Score: 106)
+* **c**: 8 kyu (Score: 12)
