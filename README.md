@@ -66,7 +66,7 @@
 
 <h3 align="left">📊 Codewars Stats:</h3>
 
--   **Username**: muenzi01 <!-- CODEWARS_USERNAME -->
--   **Honor**: 1919 <!-- CODEWARS_HONOR -->
--   **Rank**: 4 kyu <!-- CODEWARS_OVERALL_RANK -->
--   **Score**: Top 1.489% <!-- CODEWARS_OVERALL_SCORE -->
+-   **Username**: muenzi1 <!-- CODEWARS_USERNAME -->
+-   **Honor**: 191 <!-- CODEWARS_HONOR -->
+-   **Rank**: 4 ky <!-- CODEWARS_OVERALL_RANK -->
+-   **Score**: Top 1.489 <!-- CODEWARS_OVERALL_SCORE -->

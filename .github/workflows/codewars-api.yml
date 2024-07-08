@@ -39,15 +39,7 @@ jobs:
                   echo "CW_USERNAME=$CW_USERNAME" >> $GITHUB_ENV
                   echo "CW_HONOR=$CW_HONOR" >> $GITHUB_ENV
                   echo "CW_RANK=$CW_RANK" >> $GITHUB_ENV
-
-
-                  if [ -z "$CW_SCORE" ]; then
-                    echo "Error: CW_SCORE is empty"
-                    exit 1
-                  fi
-
-                  CW_SCORE_PERCENT=$(awk "BEGIN {printf \"Top %.3f%%\", $CW_SCORE / 1000}")
-                  echo "CW_SCORE_PERCENT=$CW_SCORE_PERCENT" >> $GITHUB_ENV
+                  echo "CW_SCORE=$CW_SCORE" >> $GITHUB_ENV
 
                   if [ -z "$CW_USERNAME" ] || [ -z "$CW_HONOR" ] || [ -z "$CW_RANK" ] || [ -z "$CW_SCORE" ]; then
                     echo "Error: Failed to extract data from codewars.json"
@@ -66,7 +58,7 @@ jobs:
                   sed -i 's/\*\*Username\*\*: [a-zA-Z0-9]* <!-- CODEWARS_USERNAME -->/\*\*Username\*\*: '"$CW_USERNAME"' <!-- CODEWARS_USERNAME -->/' README.md
                   sed -i 's/\*\*Honor\*\*: [0-9]* <!-- CODEWARS_HONOR -->/\*\*Honor\*\*: '"$CW_HONOR"' <!-- CODEWARS_HONOR -->/' README.md
                   sed -i 's/\*\*Rank\*\*:.*<!-- CODEWARS_OVERALL_RANK -->/\*\*Rank\*\*: '"$CW_RANK"' <!-- CODEWARS_OVERALL_RANK -->/' README.md
-                  sed -i 's/\*\*Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Score\*\*: '"$CW_SCORE_PERCENT"' <!-- CODEWARS_OVERALL_SCORE -->/' README.md
+                  sed -i 's/\*\*Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Score\*\*: '"$CW_SCORE"' <!-- CODEWARS_OVERALL_SCORE -->/' README.md
 
             - name: Commit and Push Changes
               run: |
@@ -82,4 +74,4 @@ jobs:
                   echo "New Username: ${{ env.CW_USERNAME }}"
                   echo "New Honor: ${{ env.CW_HONOR }}"
                   echo "New Overall Rank: ${{ env.CW_RANK }}"
-                  echo "New Overall Score: ${{ env.CW_SCORE_PERCENT }}"
+                  echo "New Overall Score: ${{ env.CW_SCORE }}"
