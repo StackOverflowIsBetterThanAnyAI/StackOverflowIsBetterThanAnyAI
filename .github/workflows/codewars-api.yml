@@ -41,7 +41,7 @@ jobs:
                   echo "CW_HONOR=$CW_HONOR" >> $GITHUB_ENV
                   echo "CW_RANK=$CW_RANK" >> $GITHUB_ENV
                   echo "CW_SCORE=$CW_SCORE" >> $GITHUB_ENV
-                  echo "LANG_RANKS=$LANG_RANKS" >> lang_ranks.txt
+                  echo "$LANG_RANKS" >> lang_ranks.txt
 
                   if [ -z "$CW_USERNAME" ] || [ -z "$CW_HONOR" ] || [ -z "$CW_RANK" ] || [ -z "$CW_SCORE" ]; then
                     echo "Error: Failed to extract data from codewars.json"
