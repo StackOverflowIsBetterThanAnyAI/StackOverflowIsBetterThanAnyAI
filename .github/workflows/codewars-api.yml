@@ -35,7 +35,7 @@ jobs:
                   CW_HONOR=$(jq -r '.honor // empty' codewars.json)
                   CW_RANK=$(jq -r '.ranks.overall.name // empty' codewars.json)
                   CW_SCORE=$(jq -r '.ranks.overall.score // empty' codewars.json)
-                  LANG_RANKS=$(jq -r '.ranks.languages | to_entries[] | "\(.key):\(.value.name) (Score: \(.value.score))<br/>"' codewars.json | tr -d '\n')
+                  LANG_RANKS=$(jq -r '.ranks.languages | to_entries[] | "* \(.key): \(.value.name) (Score: \(.value.score))<br/>"' codewars.json | tr -d '\n')
 
                   echo "CW_USERNAME=$CW_USERNAME" >> $GITHUB_ENV
                   echo "CW_HONOR=$CW_HONOR" >> $GITHUB_ENV
