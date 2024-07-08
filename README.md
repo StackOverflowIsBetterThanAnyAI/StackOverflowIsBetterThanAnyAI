@@ -70,30 +70,30 @@
 
 -   **Honor**: 1928 <!-- CODEWARS_HONOR -->
 
--   **Rank**: 4 kyu <!-- CODEWARS_OVERALL_RANK -->
+-   **Overall Rank**: 4 kyu <!-- CODEWARS_OVERALL_RANK -->
 
--   **Score**: 1489 <!-- CODEWARS_OVERALL_SCORE -->
+-   **Overall Score**: 1489 <!-- CODEWARS_OVERALL_SCORE -->
 
 <h3 align="left">#️⃣ Language Ranks:</h3>
 
 <!-- CODEWARS_LANGUAGE_RANKS -->
 
-* **javascript**: 4 kyu (Score: 1443)
-* **java**: 8 kyu (Score: 8)
-* **typescript**: 6 kyu (Score: 106)
-* **c**: 8 kyu (Score: 12)
-* **typescript**: 6 kyu (Score: 106)
-* **c**: 8 kyu (Score: 12)
-* **javascript**: 4 kyu (Score: 1443)
-* **java**: 8 kyu (Score: 8)
-* **typescript**: 6 kyu (Score: 106)
-* **c**: 8 kyu (Score: 12)
-* **javascript**: 4 kyu (Score: 1443)
-* **java**: 8 kyu (Score: 8)
-* **typescript**: 6 kyu (Score: 106)
-* **c**: 8 kyu (Score: 12)
+-   **javascript**: 4 kyu (Score: 1443)
+-   **java**: 8 kyu (Score: 8)
+-   **typescript**: 6 kyu (Score: 106)
+-   **c**: 8 kyu (Score: 12)
+-   **typescript**: 6 kyu (Score: 106)
+-   **c**: 8 kyu (Score: 12)
+-   **javascript**: 4 kyu (Score: 1443)
+-   **java**: 8 kyu (Score: 8)
+-   **typescript**: 6 kyu (Score: 106)
+-   **c**: 8 kyu (Score: 12)
+-   **javascript**: 4 kyu (Score: 1443)
+-   **java**: 8 kyu (Score: 8)
+-   **typescript**: 6 kyu (Score: 106)
+-   **c**: 8 kyu (Score: 12)
 
-* **javascript**: 4 kyu (Score: 1443)
-* **java**: 8 kyu (Score: 8)
-* **typescript**: 6 kyu (Score: 106)
-* **c**: 8 kyu (Score: 12)
+-   **javascript**: 4 kyu (Score: 1443)
+-   **java**: 8 kyu (Score: 8)
+-   **typescript**: 6 kyu (Score: 106)
+-   **c**: 8 kyu (Score: 12)
