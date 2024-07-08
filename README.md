@@ -70,14 +70,14 @@
 
 -   **Honor**: 1919 <!-- CODEWARS_HONOR -->
 
--   **Rank**: 4 kyu <!-- CODEWARS_OVERALL_RANK -->
+-   **Overall Rank**: 4 kyu <!-- CODEWARS_OVERALL_RANK -->
 
--   **Score**: 1489 <!-- CODEWARS_OVERALL_SCORE -->
+-   **Overall Score**: 1489 <!-- CODEWARS_OVERALL_SCORE -->
 
 <h3 align="left">Language Ranks:</h3>
 
 -   Language: Rank (Score) <!-- CODEWARS_LANGUAGE_RANKS -->
-LANG_RANKS=javascript:4 kyu (Score: 1433)
-java:8 kyu (Score: 6)
-typescript:6 kyu (Score: 100)
-c:8 kyu (Score: 10)
+    LANG_RANKS=javascript:4 kyu (Score: 1433)
+    java:8 kyu (Score: 6)
+    typescript:6 kyu (Score: 100)
+    c:8 kyu (Score: 10)

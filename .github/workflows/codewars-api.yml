@@ -35,7 +35,7 @@ jobs:
                   CW_HONOR=$(jq -r '.honor // empty' codewars.json)
                   CW_RANK=$(jq -r '.ranks.overall.name // empty' codewars.json)
                   CW_SCORE=$(jq -r '.ranks.overall.score // empty' codewars.json)
-                  LANG_RANKS=$(jq -r '.ranks.languages | to_entries[] | "\(.key):\(.value.name) (Score: \(.value.score))"' codewars.json)
+                  LANG_RANKS=$(jq -r '.ranks.languages | to_entries[] | "\(.key):\(.value.name) (Score: \(.value.score))<br/>"' codewars.json | tr -d '\n')
 
                   echo "CW_USERNAME=$CW_USERNAME" >> $GITHUB_ENV
                   echo "CW_HONOR=$CW_HONOR" >> $GITHUB_ENV
@@ -59,11 +59,10 @@ jobs:
               run: |
                   sed -i 's/\*\*Username\*\*: [a-zA-Z0-9]* <!-- CODEWARS_USERNAME -->/\*\*Username\*\*: '"$CW_USERNAME"' <!-- CODEWARS_USERNAME -->/' README.md
                   sed -i 's/\*\*Honor\*\*: [0-9]* <!-- CODEWARS_HONOR -->/\*\*Honor\*\*: '"$CW_HONOR"' <!-- CODEWARS_HONOR -->/' README.md
-                  sed -i 's/\*\*Rank\*\*:.*<!-- CODEWARS_OVERALL_RANK -->/\*\*Rank\*\*: '"$CW_RANK"' <!-- CODEWARS_OVERALL_RANK -->/' README.md
-                  sed -i 's/\*\*Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Score\*\*: '"$CW_SCORE"' <!-- CODEWARS_OVERALL_SCORE -->/' README.md
+                  sed -i 's/\*\*Overall Rank\*\*:.*<!-- CODEWARS_OVERALL_RANK -->/\*\*Rank\*\*: '"$CW_RANK"' <!-- CODEWARS_OVERALL_RANK -->/' README.md
+                  sed -i 's/\*\*Overall Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Score\*\*: '"$CW_SCORE"' <!-- CODEWARS_OVERALL_SCORE -->/' README.md
 
                   if grep -q "<!-- CODEWARS_LANGUAGE_RANKS -->" README.md; then
-                      # Delete the existing lines and add the new ones
                       sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/{n;d}' README.md
                       sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/r lang_ranks.txt' README.md
                   else
