@@ -63,8 +63,9 @@ jobs:
                   sed -i 's/\*\*Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Score\*\*: '"$CW_SCORE"' <!-- CODEWARS_OVERALL_SCORE -->/' README.md
 
                   if grep -q "<!-- CODEWARS_LANGUAGE_RANKS -->" README.md; then
-                      sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/!b;n;c' README.md
-                      cat lang_ranks.txt >> README.md
+                      # Delete the existing lines and add the new ones
+                      sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/{n;d}' README.md
+                      sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/r lang_ranks.txt' README.md
                   else
                       echo -e "\n### Language Ranks:\n<!-- CODEWARS_LANGUAGE_RANKS -->" >> README.md
                       cat lang_ranks.txt >> README.md
