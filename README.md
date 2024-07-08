@@ -78,7 +78,15 @@
 
 <!-- CODEWARS_LANGUAGE_RANKS -->
 
--   javascript: 4 kyu (Score: 1433)<br/>
 -   java: 8 kyu (Score: 6)<br/>
 -   typescript: 6 kyu (Score: 100)<br/>
 -   c: 8 kyu (Score: 10)<br/>
+-   javascript: 4 kyu (Score: 1433)
+-   java: 8 kyu (Score: 6)
+-   typescript: 6 kyu (Score: 100)
+-   c: 8 kyu (Score: 10)
+
+*   javascript: 4 kyu (Score: 1433)<br/>
+*   java: 8 kyu (Score: 6)<br/>
+*   typescript: 6 kyu (Score: 100)<br/>
+*   c: 8 kyu (Score: 10)<br/>
