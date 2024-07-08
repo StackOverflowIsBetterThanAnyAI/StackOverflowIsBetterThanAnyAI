@@ -77,6 +77,9 @@
 <h3 align="left">#️⃣ Language Ranks:</h3>
 
 <!-- CODEWARS_LANGUAGE_RANKS -->
-
 -   **java**: 8 kyu (Score: 6)
 -   **typescript**: 6 kyu (Score: 100)
+* **javascript**: 4 kyu (Score: 1443)
+* **java**: 8 kyu (Score: 8)
+* **typescript**: 6 kyu (Score: 106)
+* **c**: 8 kyu (Score: 12)
