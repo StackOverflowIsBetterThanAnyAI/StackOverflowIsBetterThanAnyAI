@@ -54,7 +54,7 @@ jobs:
                   fi
 
                   sed -i 's/\(<!-- CODEWARS_USERNAME -->\).*\(<!-- CODEWARS_USERNAME -->\)/\1 '"$CW_USERNAME"' \2/' README.md
-                  sed -i 's/\(<!-- CODEWARS_HONOR -->\).*\(<!-- CODEWARS_HONOR -->\)/\1 '"$CW_HONOR"' \2/' README.md
+                  sed -i 's/\(<!-- CODEWARS_HONOR -->\).*\(<!-- CODEWARS_HONOR -->\)/\1 '"$env.CW_HONOR"' \2/' README.md
                   sed -i 's/\(<!-- CODEWARS_OVERALL_RANK -->\).*\(<!-- CODEWARS_OVERALL_RANK -->\)/\1 '"$CW_RANK"' \2/' README.md
                   sed -i 's/\(<!-- CODEWARS_OVERALL_SCORE -->\).*\(<!-- CODEWARS_OVERALL_SCORE -->\)/\1 '"$CW_SCORE"' \2/' README.md
 
