@@ -46,7 +46,7 @@ jobs:
                     exit 1
                   fi
 
-                  CW_SCORE_PERCENT=$(awk "BEGIN {printf \"Top %.3f%%\", $CW_SCORE / 100}")
+                  CW_SCORE_PERCENT=$(awk "BEGIN {printf \"Top %.3f%%\", $CW_SCORE / 1000}")
                   echo "CW_SCORE_PERCENT=$CW_SCORE_PERCENT" >> $GITHUB_ENV
 
                   if [ -z "$CW_USERNAME" ] || [ -z "$CW_HONOR" ] || [ -z "$CW_RANK" ] || [ -z "$CW_SCORE" ]; then
