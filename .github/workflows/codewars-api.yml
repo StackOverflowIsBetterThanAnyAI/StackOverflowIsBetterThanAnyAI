@@ -65,7 +65,10 @@ jobs:
                   sed -i 's/\*\*Overall Rank\*\*:.*<!-- CODEWARS_OVERALL_RANK -->/\*\*Rank\*\*: '"$CW_RANK"' <!-- CODEWARS_OVERALL_RANK -->/' README.md
                   sed -i 's/\*\*Overall Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Score\*\*: '"$CW_SCORE"' <!-- CODEWARS_OVERALL_SCORE -->/' README.md
 
-                  sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/{n;:a;N;s/\n//;ba}' README.md
+                  # Entferne alle Zeilen nach dem Kommentar <!-- CODEWARS_LANGUAGE_RANKS --> bis zum nächsten Kommentar oder dem Dateiende
+                  sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/{:a;N;/<!-- CODEWARS_LANGUAGE_RANKS -->/!ba;s/.*\n//;}' README.md
+
+                  # Füge die neuen Sprach-Rankings ein
                   sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/r lang_ranks.md' README.md
 
             - name: Commit and Push Changes
