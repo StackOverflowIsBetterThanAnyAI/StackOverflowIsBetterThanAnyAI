@@ -69,4 +69,4 @@
 -   **Username**: muenzi01 <!-- CODEWARS_USERNAME -->
 -   **Honor**: 1916 <!-- CODEWARS_HONOR -->
 -   **Rank**: 4 kyu <!-- CODEWARS_OVERALL_RANK -->
--   **Score**: Top 1.557% <!-- CODEWARS_OVERALL_SCORE -->
+-   **Score**: Top 1487.000% <!-- CODEWARS_OVERALL_SCORE -->
