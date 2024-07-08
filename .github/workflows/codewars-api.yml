@@ -23,6 +23,9 @@ jobs:
                   echo "API Response:"
                   cat codewars.json
 
+            - name: Clear old language ranks
+              run: echo "" > lang_ranks.md
+
             - name: Extract Data from Codewars
               id: extract_data
               run: |
