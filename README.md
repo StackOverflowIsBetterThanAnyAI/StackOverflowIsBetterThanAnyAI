@@ -70,9 +70,9 @@
 
 -   **Honor**: 2012 <!-- CODEWARS_HONOR -->
 
--   **Rank**: 4 kyu <!-- CODEWARS_OVERALL_RANK -->
+-   **Overall Rank**: 4 kyu <!-- CODEWARS_OVERALL_RANK -->
 
--   **Score**: 1495 <!-- CODEWARS_OVERALL_SCORE -->
+-   **Overall Score**: 1495 <!-- CODEWARS_OVERALL_SCORE -->
 
 <h3 align="left">#️⃣ Language-specific Ranks:</h3>
 
