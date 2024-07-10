@@ -72,7 +72,7 @@
 
 -   **Overall Rank**: 4 kyu <!-- CODEWARS_OVERALL_RANK -->
 
--   **Overall Score**: 1495 <!-- CODEWARS_OVERALL_SCORE -->
+-   **Overall Score**: 1557 <!-- CODEWARS_OVERALL_SCORE -->
 
 <h3 align="left">#️⃣ Language-specific Ranks:</h3>
 
