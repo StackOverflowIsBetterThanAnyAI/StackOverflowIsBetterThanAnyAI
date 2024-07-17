@@ -60,7 +60,7 @@ jobs:
 
             - name: Update README
               run: |
-                  sed -i 's/\*\*Username\*\*: [0-9]* <!-- CODEWARS_LEADERBOARD -->/\*\*Username\*\*: '"$CW_LEADERBOARD"' <!-- CODEWARS_LEADERBOARD -->/' README.md
+                  sed -i 's/\*\*Leaderboard Position\*\*: [0-9]* <!-- CODEWARS_LEADERBOARD -->/\*\*Username\*\*: '"$CW_LEADERBOARD"' <!-- CODEWARS_LEADERBOARD -->/' README.md
                   sed -i 's/\*\*Honor\*\*: [0-9]* <!-- CODEWARS_HONOR -->/\*\*Honor\*\*: '"$CW_HONOR"' <!-- CODEWARS_HONOR -->/' README.md
                   sed -i 's/\*\*Overall Rank\*\*:.*<!-- CODEWARS_OVERALL_RANK -->/\*\*Overall Rank\*\*: '"$CW_RANK"' <!-- CODEWARS_OVERALL_RANK -->/' README.md
                   sed -i 's/\*\*Overall Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Overall Score\*\*: '"$CW_SCORE"' <!-- CODEWARS_OVERALL_SCORE -->/' README.md
