@@ -66,7 +66,7 @@
 
 <h3 align="left">📊 Codewars Stats:</h3>
 
--   **Username**: muenzi01 <!-- CODEWARS_USERNAME -->
+-   **Leaderboard Position**: muenzi01 <!-- CODEWARS_LEADERBOARD -->
 
 -   **Honor**: 2054 <!-- CODEWARS_HONOR -->
 
