@@ -38,13 +38,17 @@ jobs:
                   CW_HONOR=$(jq -r '.honor // empty' codewars.json)
                   CW_COMPLETED=$(jq -r '.codeChallenges.totalCompleted // empty' codewars.json)
                   CW_SCORE=$(jq -r '.ranks.overall.score // empty' codewars.json)
+                  
                   LANG_RANKS=$(jq -r '.ranks.languages | to_entries[] | "\(.key): \(.value.name) (Score: \(.value.score))"' codewars.json)
 
+                  # Transform the LANG_RANKS in Bash
                   TRANSFORMED_LANG_RANKS=""
                   while IFS= read -r line; do
                       key=$(echo "$line" | cut -d':' -f1 | sed -e 's/^\(.\)/\U\1/' -e 's/script/Script/')
                       value=$(echo "$line" | cut -d':' -f2 | sed -e 's/^\s*\(.\)/\U\1/')
-                      TRANSFORMED_LANG_RANKS="$TRANSFORMED_LANG_RANKS* **$key**:$value"$'\n'
+                      name=$(echo "$value" | sed 's/ (Score:.*//' | xargs)
+                      score=$(echo "$value" | sed 's/.*Score: \([0-9]*\))/\1/' | xargs)
+                      TRANSFORMED_LANG_RANKS="$TRANSFORMED_LANG_RANKS* **$key**: $name Score: $score"$'\n'
                   done <<< "$LANG_RANKS"
 
                   echo "CW_LEADERBOARD=$CW_LEADERBOARD" >> $GITHUB_ENV
