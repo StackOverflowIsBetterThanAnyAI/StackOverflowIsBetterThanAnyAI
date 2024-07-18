@@ -70,7 +70,7 @@
 
 -   **Honor**: 2054 <!-- CODEWARS_HONOR -->
 
--   **Overall Rank**: 4 kyu <!-- CODEWARS_OVERALL_RANK -->
+-   **Challenges Completed**: 123 <!-- CODEWARS_COMPLETED -->
 
 -   **Overall Score**: 1589 <!-- CODEWARS_OVERALL_SCORE -->
 

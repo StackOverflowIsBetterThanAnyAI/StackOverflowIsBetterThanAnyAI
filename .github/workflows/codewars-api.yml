@@ -36,24 +36,24 @@ jobs:
 
                   CW_LEADERBOARD=$(jq -r '.leaderboardPosition // empty' codewars.json)
                   CW_HONOR=$(jq -r '.honor // empty' codewars.json)
-                  CW_RANK=$(jq -r '.ranks.overall.name // empty' codewars.json)
+                  CW_COMPLETED=$(jq -r '.codeChallenges.totalCompleted // empty' codewars.json)
                   CW_SCORE=$(jq -r '.ranks.overall.score // empty' codewars.json)
                   LANG_RANKS=$(jq -r '.ranks.languages | to_entries[] | "* **\(.key)**: \(.value.name) (Score: \(.value.score))"' codewars.json)
 
                   echo "CW_LEADERBOARD=$CW_LEADERBOARD" >> $GITHUB_ENV
                   echo "CW_HONOR=$CW_HONOR" >> $GITHUB_ENV
-                  echo "CW_RANK=$CW_RANK" >> $GITHUB_ENV
+                  echo "CW_COMPLETED=$CW_COMPLETED" >> $GITHUB_ENV
                   echo "CW_SCORE=$CW_SCORE" >> $GITHUB_ENV
                   echo "$LANG_RANKS" >> lang_ranks.md
 
-                  if [ -z "$CW_LEADERBOARD" ] || [ -z "$CW_HONOR" ] || [ -z "$CW_RANK" ] || [ -z "$CW_SCORE" ]; then
+                  if [ -z "$CW_LEADERBOARD" ] || [ -z "$CW_HONOR" ] || [ -z "$CW_COMPLETED" ] || [ -z "$CW_SCORE" ]; then
                     echo "Error: Failed to extract data from codewars.json"
                     echo "Content of codewars.json:"
                     cat codewars.json
                     echo "Extracted values:"
                     echo "Username: $CW_LEADERBOARD"
                     echo "Honor: $CW_HONOR"
-                    echo "Rank: $CW_RANK"
+                    echo "Rank: $CW_COMPLETED"
                     echo "Score: $CW_SCORE"
                     exit 1
                   fi
@@ -62,7 +62,7 @@ jobs:
               run: |
                   sed -i 's/\*\*Leaderboard Position\*\*: #[0-9]* <!-- CODEWARS_LEADERBOARD -->/\*\*Leaderboard Position\*\*: #'"$CW_LEADERBOARD"' <!-- CODEWARS_LEADERBOARD -->/' README.md
                   sed -i 's/\*\*Honor\*\*: [0-9]* <!-- CODEWARS_HONOR -->/\*\*Honor\*\*: '"$CW_HONOR"' <!-- CODEWARS_HONOR -->/' README.md
-                  sed -i 's/\*\*Overall Rank\*\*:.*<!-- CODEWARS_OVERALL_RANK -->/\*\*Overall Rank\*\*: '"$CW_RANK"' <!-- CODEWARS_OVERALL_RANK -->/' README.md
+                  sed -i 's/\*\*Challenges Completed\*\*: [0-9]*<!-- CODEWARS_COMPLETED -->/\*\*Challenges Completed\*\*: '"$CW_COMPLETED"' <!-- CODEWARS_COMPLETED -->/' README.md
                   sed -i 's/\*\*Overall Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Overall Score\*\*: '"$CW_SCORE"' <!-- CODEWARS_OVERALL_SCORE -->/' README.md
 
                   sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/,$d' README.md
@@ -84,5 +84,5 @@ jobs:
                   cat README.md
                   echo "New Leaderboard Position: ${{ env.CW_LEADERBOARD }}"
                   echo "New Honor: ${{ env.CW_HONOR }}"
-                  echo "New Overall Rank: ${{ env.CW_RANK }}"
+                  echo "New Challenges Completed: ${{ env.CW_COMPLETED }}"
                   echo "New Overall Score: ${{ env.CW_SCORE }}"
