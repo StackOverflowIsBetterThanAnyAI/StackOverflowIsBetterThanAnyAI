@@ -70,7 +70,7 @@
 
 -   **Honor**: 2054 <!-- CODEWARS_HONOR -->
 
--   **Challenges Completed**: 123 <!-- CODEWARS_COMPLETED -->
+-   **Challenges Completed**: 569 <!-- CODEWARS_COMPLETED -->
 
 -   **Overall Score**: 1589 <!-- CODEWARS_OVERALL_SCORE -->
 
