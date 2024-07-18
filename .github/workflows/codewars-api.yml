@@ -41,7 +41,6 @@ jobs:
                   
                   LANG_RANKS=$(jq -r '.ranks.languages | to_entries[] | "\(.key): \(.value.name) (Score: \(.value.score))"' codewars.json)
 
-                  # Transform the LANG_RANKS in Bash
                   TRANSFORMED_LANG_RANKS=""
                   while IFS= read -r line; do
                       key=$(echo "$line" | cut -d':' -f1 | sed -e 's/^\(.\)/\U\1/' -e 's/script/Script/')
