@@ -62,7 +62,7 @@ jobs:
               run: |
                   sed -i 's/\*\*Leaderboard Position\*\*: #[0-9]* <!-- CODEWARS_LEADERBOARD -->/\*\*Leaderboard Position\*\*: #'"$CW_LEADERBOARD"' <!-- CODEWARS_LEADERBOARD -->/' README.md
                   sed -i 's/\*\*Honor\*\*: [0-9]* <!-- CODEWARS_HONOR -->/\*\*Honor\*\*: '"$CW_HONOR"' <!-- CODEWARS_HONOR -->/' README.md
-                  sed -i 's/\*\*Challenges Completed\*\*: [0-9]*<!-- CODEWARS_COMPLETED -->/\*\*Challenges Completed\*\*: '"$CW_COMPLETED"' <!-- CODEWARS_COMPLETED -->/' README.md
+                  sed -i 's/\*\*Challenges Completed\*\*: [0-9]* <!-- CODEWARS_COMPLETED -->/\*\*Challenges Completed\*\*: '"$CW_COMPLETED"' <!-- CODEWARS_COMPLETED -->/' README.md
                   sed -i 's/\*\*Overall Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Overall Score\*\*: '"$CW_SCORE"' <!-- CODEWARS_OVERALL_SCORE -->/' README.md
 
                   sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/,$d' README.md
