@@ -43,8 +43,10 @@ jobs:
                   TRANSFORMED_LANG_RANKS=""
                   while IFS= read -r line; do
                       key=$(echo "$line" | cut -d':' -f1 | sed -e 's/^\(.\)/\U\1/' -e 's/script/Script/')
-                      value=$(echo "$line" | cut -d':' -f2- | sed -e 's/ (Score: / Score: /')
-                      TRANSFORMED_LANG_RANKS="$TRANSFORMED_LANG_RANKS* **$key**:$value"$'\n'
+                      value=$(echo "$line" | cut -d':' -f2-)
+                      name=$(echo "$value" | sed -E 's/\(Score: [0-9]+\)//' | xargs)
+                      score=$(echo "$value" | grep -oP '(?<=Score: )\d+')
+                      TRANSFORMED_LANG_RANKS="$TRANSFORMED_LANG_RANKS* **$key**: $name Score: $score"$'\n'
                   done <<< "$LANG_RANKS"
 
                   echo "CW_LEADERBOARD=$CW_LEADERBOARD" >> $GITHUB_ENV
@@ -93,4 +95,3 @@ jobs:
                   echo "New Honor: ${{ env.CW_HONOR }}"
                   echo "New Challenges Completed: ${{ env.CW_COMPLETED }}"
                   echo "New Overall Score: ${{ env.CW_SCORE }}"
-                  
