@@ -66,7 +66,7 @@
 
 <h3 align="left">📊 Codewars Stats:</h3>
 
--   **Leaderboard Position**: #7052 <!-- CODEWARS_LEADERBOARD -->
+-   **Leaderboard Position**: #7054 <!-- CODEWARS_LEADERBOARD -->
 
 -   **Honor**: 2247 <!-- CODEWARS_HONOR -->
 
@@ -79,8 +79,8 @@
 <!-- CODEWARS_LANGUAGE_RANKS -->
 
 * **JavaScript**: 4 kyu - Score: 1671
-* **Java**: 8 kyu - Score: 8
-* **TypeScript**: 6 kyu - Score: 156
+* **Java**: 8 kyu - Score: 10
+* **TypeScript**: 6 kyu - Score: 160
 * **C**: 8 kyu - Score: 12
 * **Python**: 8 kyu - Score: 8
 
