@@ -80,7 +80,7 @@
 
 * **JavaScript**: 4 kyu - Score: 1710
 * **Java**: 7 kyu - Score: 23
-* **TypeScript**: 6 kyu - Score: 178
+* **TypeScript**: 6 kyu - Score: 184
 * **C**: 8 kyu - Score: 14
 * **Python**: 8 kyu - Score: 17
 * **CoffeeScript**: 8 kyu - Score: 4
