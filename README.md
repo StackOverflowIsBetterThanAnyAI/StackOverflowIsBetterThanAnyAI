@@ -89,3 +89,4 @@
 * **Python**: 7 kyu - Score: 21
 * **CoffeeScript**: 8 kyu - Score: 8
 * **Sql**: 8 kyu - Score: 6
+
