@@ -83,7 +83,7 @@
 <!-- CODEWARS_LANGUAGE_RANKS -->
 
 * **JavaScript**: 4 kyu - Score: 1752
-* **Java**: 7 kyu - Score: 36
+* **Java**: 7 kyu - Score: 39
 * **TypeScript**: 6 kyu - Score: 210
 * **C**: 8 kyu - Score: 16
 * **Python**: 7 kyu - Score: 21
