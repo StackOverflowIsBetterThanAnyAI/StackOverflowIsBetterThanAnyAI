@@ -70,7 +70,7 @@
 
 <h3 align="left">📊 Codewars Stats:</h3>
 
--   **Leaderboard Position**: #6095 <!-- CODEWARS_LEADERBOARD -->
+-   **Leaderboard Position**: #6097 <!-- CODEWARS_LEADERBOARD -->
 
 -   **Honor**: 2450 <!-- CODEWARS_HONOR -->
 
