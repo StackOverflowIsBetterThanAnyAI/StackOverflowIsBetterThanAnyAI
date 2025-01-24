@@ -87,7 +87,7 @@
 * **TypeScript**: 6 kyu - Score: 228
 * **C**: 8 kyu - Score: 18
 * **Python**: 7 kyu - Score: 29
-* **CoffeeScript**: 8 kyu - Score: 16
+* **CoffeeScript**: 7 kyu - Score: 21
 * **Sql**: 8 kyu - Score: 6
 * **Ruby**: 8 kyu - Score: 4
 * **Csharp**: 8 kyu - Score: 4
