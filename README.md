@@ -70,7 +70,7 @@
 
 <h3 align="left">📊 Codewars Stats:</h3>
 
--   **Leaderboard Position**: #5798 <!-- CODEWARS_LEADERBOARD -->
+-   **Leaderboard Position**: #5799 <!-- CODEWARS_LEADERBOARD -->
 
 -   **Honor**: 2546 <!-- CODEWARS_HONOR -->
 
@@ -90,6 +90,7 @@
 * **CoffeeScript**: 7 kyu - Score: 28
 * **Sql**: 8 kyu - Score: 11
 * **Ruby**: 8 kyu - Score: 4
-* **Csharp**: 8 kyu - Score: 6
+* **Csharp**: 8 kyu - Score: 8
 * **Shell**: 8 kyu - Score: 2
+* **Cpp**: 8 kyu - Score: 2
 
