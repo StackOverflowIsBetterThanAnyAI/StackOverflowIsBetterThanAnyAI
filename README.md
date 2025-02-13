@@ -82,11 +82,11 @@
 
 <!-- CODEWARS_LANGUAGE_RANKS -->
 
-* **JavaScript**: 3 kyu - Score: 1844
+* **JavaScript**: 3 kyu - Score: 1846
 * **Java**: 7 kyu - Score: 45
 * **TypeScript**: 5 kyu - Score: 234
 * **C**: 8 kyu - Score: 18
-* **Python**: 7 kyu - Score: 32
+* **Python**: 7 kyu - Score: 34
 * **CoffeeScript**: 7 kyu - Score: 28
 * **Sql**: 8 kyu - Score: 11
 * **Ruby**: 8 kyu - Score: 6
