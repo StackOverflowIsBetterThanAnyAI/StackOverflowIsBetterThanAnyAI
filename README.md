@@ -12,7 +12,7 @@
 
 ###
 
-<p align="left">I'm Michael from Germany. <br><br>- 👩‍💻 I finished my bachelor's degree in media technology with a specialisation in media informatics very successfully. <br>- 🔭 I’ve just started working as a Frontend Web Developer: Practice makes perfect.<br>- 📚 I'm currently learning React and TypeScript.<br>- ⚡ Besides programming, I enjoy doing sports, listening to music and going for walks in my free time.</p>
+<p align="left">I'm Michael from Germany. <br><br>- 👩‍💻 I finished my bachelor's degree in media technology with a specialisation in media informatics very successfully. <br>- 🔭 I’ve just started my Master in Applied Computer Science / Infotronics.<br>- 📚 I'm currently learning Frontend Web Developing with React and TypeScript.<br>- ⚡ Besides programming, I enjoy doing sports, listening to music and going for walks in my free time.</p>
 
 ###
 
