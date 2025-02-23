@@ -12,7 +12,11 @@
 
 ###
 
-<p align="left">I'm Michael from Germany. <br><br>- 👩‍💻 I finished my Bachelor's degree in Media Technology with a specialisation in Media Informatics very successfully.<br>- 🔭 I’ve just started my Master in Applied Computer Science / Infotronics.<br>- 📚 I'm currently learning Frontend Web Developing with React and TypeScript.<br>- ⚡ Besides programming, I enjoy doing sports, listening to music and going for walks in my free time.</p>
+![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Consolas&pause=1200&color=F7F7F7&background=00000055&center=true&vCenter=true&width=320&height=64&lines=I+am+Michael+from+Germany.)
+
+###
+
+<p align="left">- 👩‍💻 I finished my Bachelor's degree in Media Technology with a specialisation in Media Informatics very successfully.<br>- 🔭 I’ve just started my Master in Applied Computer Science / Infotronics.<br>- 📚 I'm currently learning Frontend Web Developing with React and TypeScript.<br>- ⚡ Besides programming, I enjoy doing sports, listening to music and going for walks in my free time.</p>
 
 ###
 
