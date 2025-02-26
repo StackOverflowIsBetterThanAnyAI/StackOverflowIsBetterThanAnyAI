@@ -76,8 +76,6 @@
 
 -   **Leaderboard Position**: #5428 <!-- CODEWARS_LEADERBOARD -->
 
--   **Honor**: 2646 <!-- CODEWARS_HONOR -->
-
 -   **Challenges Completed**: 707 <!-- CODEWARS_COMPLETED -->
 
 -   **Overall Score**: 1994 <!-- CODEWARS_OVERALL_SCORE -->
