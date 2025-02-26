@@ -46,7 +46,7 @@ jobs:
                       value=$(echo "$line" | cut -d':' -f2-)
                       rank=$(echo "$value" | sed -E 's/\(Score: [0-9]+\)//' | xargs)
                       score=$(echo "$value" | grep -oP '(?<=Score: )\d+')
-                      TRANSFORMED_LANG_RANKS="$TRANSFORMED_LANG_RANKS* **$key**: $rank - Score: $score"$'\n'
+                      TRANSFORMED_LANG_RANKS="$TRANSFORMED_LANG_RANKS* **$key**: Rank: $rank - Score: $score"$'\n'
                   done <<< "$LANG_RANKS"
 
                   echo "CW_LEADERBOARD=$CW_LEADERBOARD" >> $GITHUB_ENV
