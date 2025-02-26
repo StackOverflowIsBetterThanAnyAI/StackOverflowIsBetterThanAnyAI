@@ -83,3 +83,11 @@
 <h3 align="left">#️⃣ Language-specific Ranks:</h3>
 
 <!-- CODEWARS_LANGUAGE_RANKS -->
+
+* **JavaScript**: Rank: 3 kyu - Score: 1949
+* **Java**: Rank: 7 kyu - Score: 48
+* **TypeScript**: Rank: 5 kyu - Score: 274
+* **Python**: Rank: 7 kyu - Score: 46
+* **CoffeeScript**: Rank: 7 kyu - Score: 46
+
+![Lightblue Cloudy Background](https://github.com/StackOverflowIsBetterThanAnyAI/StackOverflowIsBetterThanAnyAI/blob/main/background.png?raw=true)
