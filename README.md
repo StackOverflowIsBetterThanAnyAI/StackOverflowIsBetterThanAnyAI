@@ -85,3 +85,17 @@
 <h3 align="left">#️⃣ Language-specific Ranks:</h3>
 
 <!-- CODEWARS_LANGUAGE_RANKS -->
+
+* **JavaScript**: 3 kyu - Score: 1927
+* **Java**: 7 kyu - Score: 48
+* **TypeScript**: 5 kyu - Score: 270
+* **C**: 7 kyu - Score: 27
+* **Python**: 7 kyu - Score: 46
+* **CoffeeScript**: 7 kyu - Score: 44
+* **Sql**: 8 kyu - Score: 11
+* **Ruby**: 8 kyu - Score: 6
+* **Csharp**: 8 kyu - Score: 8
+* **Shell**: 8 kyu - Score: 2
+* **Cpp**: 8 kyu - Score: 2
+* **Php**: 8 kyu - Score: 2
+
