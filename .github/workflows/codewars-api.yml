@@ -38,7 +38,7 @@ jobs:
                   CW_HONOR=$(jq -r '.honor // empty' codewars.json)
                   CW_COMPLETED=$(jq -r '.codeChallenges.totalCompleted // empty' codewars.json)
                   CW_SCORE=$(jq -r '.ranks.overall.score // empty' codewars.json)
-                  LANG_RANKS=$(jq -r '.ranks.languages | to_entries[] | "\(.key): \(.value.rank) (Score: \(.value.score))"' codewars.json)
+                  LANG_RANKS=$(jq -r '.ranks.languages | to_entries[] | select(.value.score > 40) | "\(.key): \(.value.rank) (Score: \(.value.score))"' codewars.json)
 
                   TRANSFORMED_LANG_RANKS=""
                   while IFS= read -r line; do
