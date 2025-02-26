@@ -89,13 +89,6 @@
 * **JavaScript**: -3 - Score: 1927
 * **Java**: -7 - Score: 48
 * **TypeScript**: -5 - Score: 270
-* **C**: -7 - Score: 27
 * **Python**: -7 - Score: 46
 * **CoffeeScript**: -7 - Score: 44
-* **Sql**: -8 - Score: 11
-* **Ruby**: -8 - Score: 6
-* **Csharp**: -8 - Score: 8
-* **Shell**: -8 - Score: 2
-* **Cpp**: -8 - Score: 2
-* **Php**: -8 - Score: 2
 
