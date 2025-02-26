@@ -91,3 +91,6 @@
 * **CoffeeScript**: Rank: 7 kyu - Score: 46
 
 <!-- CODEWARS_LANGUAGE_RANKS_END -->
+
+![Lightblue Cloudy Background](https://github.com/StackOverflowIsBetterThanAnyAI/StackOverflowIsBetterThanAnyAI/blob/main/background.png?raw=true)
+
