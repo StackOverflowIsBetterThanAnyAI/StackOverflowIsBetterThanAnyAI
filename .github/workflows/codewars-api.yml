@@ -70,8 +70,8 @@ jobs:
                   sed -i 's/\*\*Challenges Completed\*\*: [0-9]* <!-- CODEWARS_COMPLETED -->/\*\*Challenges Completed\*\*: '"$CW_COMPLETED"' <!-- CODEWARS_COMPLETED -->/' README.md
                   sed -i 's/\*\*Overall Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Overall Score\*\*: '"$CW_SCORE"' <!-- CODEWARS_OVERALL_SCORE -->/' README.md
 
-                  sed -i '/<!-- CODEWARS_LANGUAGE_RANKS_START -->/,/<!-- CODEWARS_LANGUAGE_RANKS_END -->/c\<!-- CODEWARS_LANGUAGE_RANKS_START -->\n'"$(cat lang_ranks.md)"'\n<!-- CODEWARS_LANGUAGE_RANKS_END -->' README.md
-
+                  sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/,$d' README.md
+                  
                   echo '<!-- CODEWARS_LANGUAGE_RANKS -->' >> README.md
                   cat lang_ranks.md >> README.md
 
