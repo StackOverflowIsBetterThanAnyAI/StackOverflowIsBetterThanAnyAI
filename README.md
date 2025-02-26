@@ -84,9 +84,9 @@
 
 <!-- CODEWARS_LANGUAGE_RANKS -->
 
-* **JavaScript**: Rank: -3 - Score: 1927
-* **Java**: Rank: -7 - Score: 48
-* **TypeScript**: Rank: -5 - Score: 270
-* **Python**: Rank: -7 - Score: 46
-* **CoffeeScript**: Rank: -7 - Score: 44
+* **JavaScript**: Rank: 1927 - Score: 1927
+* **Java**: Rank: 48 - Score: 48
+* **TypeScript**: Rank: 270 - Score: 270
+* **Python**: Rank: 46 - Score: 46
+* **CoffeeScript**: Rank: 44 - Score: 44
 
