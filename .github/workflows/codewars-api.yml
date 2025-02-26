@@ -43,7 +43,7 @@ jobs:
                   while IFS= read -r line; do
                       key=$(echo "$line" | cut -d':' -f1 | sed -e 's/^\(.\)/\U\1/' -e 's/script/Script/')
                       value=$(echo "$line" | cut -d':' -f2-)
-                      rank=$(echo "$value" | sed -E 's/\(Score: [0-9]+\)//' | xargs)
+                      rank=$(echo "$value" | grep -oP '(?<=: )-?\d+' | sed 's/^-//')
                       score=$(echo "$value" | grep -oP '(?<=Score: )\d+')
                       TRANSFORMED_LANG_RANKS="$TRANSFORMED_LANG_RANKS* **$key**: Rank: $rank - Score: $score"$'\n'
                   done <<< "$LANG_RANKS"
