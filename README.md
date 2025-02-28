@@ -86,7 +86,7 @@
 
 * **JavaScript**: Rank: 3 kyu - Score: 1965
 * **Java**: Rank: 7 kyu - Score: 48
-* **TypeScript**: Rank: 5 kyu - Score: 278
+* **TypeScript**: Rank: 5 kyu - Score: 288
 * **Python**: Rank: 7 kyu - Score: 46
 * **CoffeeScript**: Rank: 7 kyu - Score: 50
 
