@@ -20,6 +20,10 @@
 
 ###
 
+<hr>
+
+###
+
 ![Michael's GitHub stats](https://github-readme-stats.vercel.app/api?username=StackOverflowIsBetterThanAnyAI&show=reviews&show_icons=true&include_all_commits=true)
 
 ###
@@ -63,6 +67,10 @@
   <img width="12" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="typescript logo"  />
 </div>
+
+###
+
+<hr>
 
 ###
 
