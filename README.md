@@ -95,7 +95,7 @@
 * **JavaScript**: Rank: 3 kyu - Score: 2000
 * **Java**: Rank: 7 kyu - Score: 59
 * **TypeScript**: Rank: 5 kyu - Score: 316
-* **Python**: Rank: 7 kyu - Score: 48
+* **Python**: Rank: 7 kyu - Score: 51
 * **CoffeeScript**: Rank: 7 kyu - Score: 71
 
 ![Lightblue Cloudy Background](https://github.com/StackOverflowIsBetterThanAnyAI/StackOverflowIsBetterThanAnyAI/blob/main/background.png?raw=true)
