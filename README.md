@@ -12,7 +12,7 @@
 
 ###
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Consolas&pause=1200&color=F7F7F7&background=00000055&center=true&vCenter=true&width=320&height=64&lines=I+am+Michael+from+Germany.)
+![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Consolas&duration=7500&color=F7F7F7&background=00000055&center=true&vCenter=true&repeat=false&width=320&height=64&lines=I+am+Michael+from+Germany.)
 
 ###
 
