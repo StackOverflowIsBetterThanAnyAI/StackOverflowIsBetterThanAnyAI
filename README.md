@@ -54,7 +54,7 @@
 
 ###
 
-![Michael's CodeWars stats](https://www.codewars.com/users/muenzi01/badges/large)
+[![Michael's CodeWars stats](https://www.codewars.com/users/muenzi01/badges/large)](https://www.codewars.com/users/muenzi01)
 
 <h3 align="left">📊 Codewars Stats:</h3>
 
