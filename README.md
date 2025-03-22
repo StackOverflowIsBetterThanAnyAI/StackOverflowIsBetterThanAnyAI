@@ -12,7 +12,7 @@
 
 ###
 
-![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Consolas&duration=7500&color=F7F7F7&background=00000055&center=true&vCenter=true&repeat=false&width=320&height=64&lines=I+am+Michael+from+Germany.)
+![I am Michael from Germany](https://readme-typing-svg.herokuapp.com?font=Consolas&duration=7500&color=F7F7F7&background=00000055&center=true&vCenter=true&repeat=false&width=320&height=64&lines=I+am+Michael+from+Germany.)
 
 ###
 
@@ -32,7 +32,7 @@
 
 ###
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=StackOverflowIsBetterThanAnyAI&layout=compact)
+![Michael's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=StackOverflowIsBetterThanAnyAI&layout=compact)
 
 ###
 
