@@ -58,20 +58,20 @@
 
 <h3 align="left">📊 Codewars Stats:</h3>
 
--   **Leaderboard Position**: #4797 <!-- CODEWARS_LEADERBOARD -->
+-   **Leaderboard Position**: #4786 <!-- CODEWARS_LEADERBOARD -->
 
--   **Challenges Completed**: 767 <!-- CODEWARS_COMPLETED -->
+-   **Challenges Completed**: 769 <!-- CODEWARS_COMPLETED -->
 
--   **Overall Score**: 2190 <!-- CODEWARS_OVERALL_SCORE -->
+-   **Overall Score**: 2196 <!-- CODEWARS_OVERALL_SCORE -->
 
 <h3 align="left">#️⃣ Language-specific Ranks:</h3>
 
 <!-- CODEWARS_LANGUAGE_RANKS -->
 
-* **JavaScript**: Rank: 3 kyu - Score: 2112
+* **JavaScript**: Rank: 3 kyu - Score: 2118
 * **Java**: Rank: 7 kyu - Score: 74
 * **TypeScript**: Rank: 5 kyu - Score: 341
 * **Python**: Rank: 6 kyu - Score: 78
-* **CoffeeScript**: Rank: 6 kyu - Score: 97
+* **CoffeeScript**: Rank: 6 kyu - Score: 99
 
 ![Lightblue Cloudy Background](https://github.com/StackOverflowIsBetterThanAnyAI/StackOverflowIsBetterThanAnyAI/blob/main/background.png?raw=true)
