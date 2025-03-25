@@ -58,7 +58,7 @@
 
 <h3 align="left">📊 Codewars Stats:</h3>
 
--   **Leaderboard Position**: #4729 <!-- CODEWARS_LEADERBOARD -->
+-   **Leaderboard Position**: #4730 <!-- CODEWARS_LEADERBOARD -->
 
 -   **Challenges Completed**: 773 <!-- CODEWARS_COMPLETED -->
 
