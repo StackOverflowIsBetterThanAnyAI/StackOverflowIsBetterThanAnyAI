@@ -58,17 +58,17 @@
 
 <h3 align="left">📊 Codewars Stats:</h3>
 
--   **Leaderboard Position**: #4641 <!-- CODEWARS_LEADERBOARD -->
+-   **Leaderboard Position**: #4625 <!-- CODEWARS_LEADERBOARD -->
 
--   **Challenges Completed**: 782 <!-- CODEWARS_COMPLETED -->
+-   **Challenges Completed**: 784 <!-- CODEWARS_COMPLETED -->
 
--   **Overall Score**: 2239 <!-- CODEWARS_OVERALL_SCORE -->
+-   **Overall Score**: 2245 <!-- CODEWARS_OVERALL_SCORE -->
 
 <h3 align="left">#️⃣ Language-specific Ranks:</h3>
 
 <!-- CODEWARS_LANGUAGE_RANKS -->
 
-* **JavaScript**: Rank: 3 kyu - Score: 2159
+* **JavaScript**: Rank: 3 kyu - Score: 2165
 * **Java**: Rank: 7 kyu - Score: 74
 * **TypeScript**: Rank: 5 kyu - Score: 344
 * **Python**: Rank: 6 kyu - Score: 80
