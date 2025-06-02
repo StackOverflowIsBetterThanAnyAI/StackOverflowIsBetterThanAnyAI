@@ -52,11 +52,11 @@
 
 ###
 
-<h3 align="left">👨‍💻 I am also actively coding on CodeWars:</h3>
+<h3 align="left">👨‍💻 I am also actively coding on Codewars:</h3>
 
 ###
 
-[![Michael's CodeWars stats](https://www.codewars.com/users/muenzi01/badges/large)](https://www.codewars.com/users/muenzi01)
+[![Michael's Codewars stats](https://www.codewars.com/users/muenzi01/badges/large)](https://www.codewars.com/users/muenzi01)
 
 <h3 align="left">📊 Codewars Stats:</h3>
 
