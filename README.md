@@ -38,6 +38,26 @@
 
 ###
 
+<hr>
+
+###
+
+<h3 align="left">🏳️ I am actively contributing to Open Source:</h3>
+
+###
+
+All my own npm packages are installed this often per month:
+
+###
+
+![NPM Downloads of Michael's Packages](https://img.shields.io/npm-stat/dm/muenzi01)
+
+###
+
+<hr>
+
+###
+
 <h3 align="left">🛠 I have already gained experience working with:</h3>
 
 ###
