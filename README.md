@@ -80,7 +80,7 @@ All my own npm packages are installed this often per month:
 
 <h3 align="left">📊 Codewars Stats:</h3>
 
--   **Leaderboard Position**: #4570 <!-- CODEWARS_LEADERBOARD -->
+-   **Leaderboard Position**: #4573 <!-- CODEWARS_LEADERBOARD -->
 
 -   **Challenges Completed**: 811 <!-- CODEWARS_COMPLETED -->
 
