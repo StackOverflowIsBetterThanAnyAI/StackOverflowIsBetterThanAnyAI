@@ -16,7 +16,7 @@
 
 ###
 
-<p align="left">- 👩‍💻 I finished my Bachelor's degree in Media Technology with a specialisation in Media Informatics very successfully.<br>- 🔭 I’ve just started my Master in Applied Computer Science / Infotronics.<br>- 📚 I'm currently learning Frontend Web Developing with React and TypeScript.<br>- ⚡ Besides programming, I enjoy doing sports, listening to music and going for walks in my free time.</p>
+<p align="left">- 👩‍💻 I finished my Bachelor's degree in Media Technology with a specialisation in Media Informatics very successfully.<br>- 🔭 I am currently studying for a master's degree in Applied Computer Science / Infotronics.<br>- 📚 I'm currently doing Frontend Web Developing with React and TypeScript.<br>- ⚡ Besides programming, I enjoy doing sports, listening to music and going for walks in my free time.</p>
 
 ###
 
