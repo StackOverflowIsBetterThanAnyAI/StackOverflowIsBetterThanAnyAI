@@ -80,17 +80,17 @@ All my own npm packages are installed this often per month:
 
 <h3 align="left">📊 Codewars Stats:</h3>
 
--   **Leaderboard Position**: #4533 <!-- CODEWARS_LEADERBOARD -->
+-   **Leaderboard Position**: #4510 <!-- CODEWARS_LEADERBOARD -->
 
--   **Challenges Completed**: 824 <!-- CODEWARS_COMPLETED -->
+-   **Challenges Completed**: 828 <!-- CODEWARS_COMPLETED -->
 
--   **Overall Score**: 2356 <!-- CODEWARS_OVERALL_SCORE -->
+-   **Overall Score**: 2368 <!-- CODEWARS_OVERALL_SCORE -->
 
 <h3 align="left">#️⃣ Language-specific Ranks:</h3>
 
 <!-- CODEWARS_LANGUAGE_RANKS -->
 
-* **JavaScript**: Rank: 3 kyu - Score: 2274
+* **JavaScript**: Rank: 3 kyu - Score: 2286
 * **Java**: Rank: 7 kyu - Score: 74
 * **TypeScript**: Rank: 5 kyu - Score: 350
 * **Python**: Rank: 6 kyu - Score: 80
