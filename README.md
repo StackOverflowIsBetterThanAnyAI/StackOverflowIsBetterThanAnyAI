@@ -95,6 +95,6 @@ All my own npm packages are installed this often per month:
 * **TypeScript**: Rank: 5 kyu - Score: 350
 * **Python**: Rank: 6 kyu - Score: 84
 * **CoffeeScript**: Rank: 6 kyu - Score: 120
-* **Cpp**: Rank: 7 kyu - Score: 72
+* **Cpp**: Rank: 7 kyu - Score: 75
 
 ![Lightblue Cloudy Background](https://github.com/StackOverflowIsBetterThanAnyAI/StackOverflowIsBetterThanAnyAI/blob/main/background.png?raw=true)
