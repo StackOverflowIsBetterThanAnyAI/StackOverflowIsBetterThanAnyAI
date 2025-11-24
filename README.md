@@ -80,7 +80,7 @@ All my own npm packages are installed this often per month:
 
 <h3 align="left">📊 Codewars Stats:</h3>
 
--   **Leaderboard Position**: #4415 <!-- CODEWARS_LEADERBOARD -->
+-   **Leaderboard Position**: #4417 <!-- CODEWARS_LEADERBOARD -->
 
 -   **Challenges Completed**: 838 <!-- CODEWARS_COMPLETED -->
 
@@ -95,6 +95,6 @@ All my own npm packages are installed this often per month:
 * **TypeScript**: Rank: 5 kyu - Score: 350
 * **Python**: Rank: 6 kyu - Score: 84
 * **CoffeeScript**: Rank: 6 kyu - Score: 120
-* **Cpp**: Rank: 7 kyu - Score: 75
+* **Cpp**: Rank: 6 kyu - Score: 98
 
 ![Lightblue Cloudy Background](https://github.com/StackOverflowIsBetterThanAnyAI/StackOverflowIsBetterThanAnyAI/blob/main/background.png?raw=true)
