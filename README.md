@@ -26,7 +26,7 @@
 
 <h3 align="left">📈 My GitHub statistics:</h3>
 
-![Michael's GitHub stats](https://github-readme-stats.vercel.app/api?username=StackOverflowIsBetterThanAnyAI&show=reviews&show_icons=true&include_all_commits=true)
+![Michael's GitHub stats](https://github-readme-stats-stackoverflowisbetterthananyais-projects.vercel.app/api?username=StackOverflowIsBetterThanAnyAI&show=reviews&show_icons=true&include_all_commits=true)
 
 ###
 
@@ -34,7 +34,7 @@
 
 ###
 
-![Michael's Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=StackOverflowIsBetterThanAnyAI&layout=compact)
+![Michael's Top Languages](https://github-readme-stats-stackoverflowisbetterthananyais-projects.vercel.app/api/top-langs/?username=StackOverflowIsBetterThanAnyAI&layout=compact)
 
 ###
 
