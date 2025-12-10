@@ -26,7 +26,7 @@
 
 <h3 align="left">📈 My GitHub statistics:</h3>
 
-![Michael's GitHub stats](https://github-readme-stats.vercel.app/api?username=StackOverflowIsBetterThanAnyAI&show=reviews&show_icons=true&include_all_commits=true)
+![Michael's GitHub stats](https://github-readme-stats-lilac-iota-24.vercel.app/api/top-langs/?username=StackOverflowIsBetterThanAnyAI&layout=compact)
 
 ###
 
