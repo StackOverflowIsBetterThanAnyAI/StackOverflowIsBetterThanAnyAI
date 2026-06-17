@@ -62,7 +62,7 @@ All my own npm packages are installed this often per month:
 
 ###
 
-| CSS3 | Docker | Git | HTML5 | JavaScript | npm | Raspberry Pi | React.js | Tailwind | TypeScript |
+| CSS | Docker | Git | HTML | JavaScript | npm | Raspberry Pi | React | Tailwind | TypeScript |
 |---|---|---|---|---|---|---|---|---|---|
 | <div align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="CSS3"  /></div> | <div align="center"><img src="https://skillicons.dev/icons?i=docker" height="40" alt="Docker"  /></div> | <div align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" alt="Git"  /></div> | <div align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="HTML5"  /></div> | <div align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="JavaScript"  /></div> | <div align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" height="40" alt="npm"  /></div> | <div align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" height="40" alt="Raspberry Pi"  /></div> | <div align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="React.js"  /></div> | <div align="center"><img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" height="40" alt="Tailwind"  /></div> | <div align="center"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="TypeScript"  /></div> |
 
