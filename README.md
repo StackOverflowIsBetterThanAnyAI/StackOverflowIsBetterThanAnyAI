@@ -16,7 +16,7 @@
 
 ###
 
-<p align="left">- 👩‍💻 I finished my bachelor's degree in Media Technology with a specialisation in Media Informatics very successfully.<br>- 🔭 I have just finished my master's degree in Applied Computer Science / Infotronics.<br>- 📚 Programming-wise, I'm doing Frontend Web Developing with React and TypeScript.<br>- 🖥 I'm also familiar with backend development using Python and Django, mobile development with React Native, and Raspberry Pis.<br>- ⚡ Besides programming, I enjoy doing sports, listening to music and going for walks in my free time.</p>
+<p align="left">- 👩‍💻 I finished my bachelor's degree in Media Technology with a specialisation in Media Informatics very successfully.<br>- 🔭 I have just finished my master's degree in Applied Computer Science / Infotronics.<br>- 📚 Programming-wise, I'm doing Frontend Web Developing with React and TypeScript.<br>- 🖥 I'm also familiar with backend development using Python and Django, mobile development with React Native, and Raspberry Pis.<br>- ⚡ Besides programming, I enjoy doing sports, listening to music and going for walks in my free time.<br>- ♿ In my software design, digital accessibility takes priority over visual design in order to include as many people as possible.</p>
 
 ###
 
