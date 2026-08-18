@@ -93,7 +93,7 @@ All my own npm packages are installed this often per month:
 * **JavaScript**: Rank: 3 kyu - Score: 2476
 * **Java**: Rank: 6 kyu - Score: 78
 * **TypeScript**: Rank: 5 kyu - Score: 373
-* **Python**: Rank: 6 kyu - Score: 120
+* **Python**: Rank: 6 kyu - Score: 122
 * **CoffeeScript**: Rank: 6 kyu - Score: 120
 * **Cpp**: Rank: 6 kyu - Score: 122
 
