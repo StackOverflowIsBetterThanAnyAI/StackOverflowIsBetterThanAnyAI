@@ -4,14 +4,18 @@
 
 <h1 align="center">console.log('Hello World!')</h1>
 
+<br>
+
 ## 👋 I am Michael from Germany
 
--   🎓 I finished my bachelor's degree in Media Technology with a specialisation in Media Informatics very successfully.
--   🎓 In July 2026, I finished my master's degree in Applied Computer Science / Infotronics.
+-   📜 In March 2024, I finished my bachelor's degree in Media Technology, specialising in Media Informatics, with a grade of 1.5.
+-   🎓 In July 2026, I finished my master's degree in Applied Computer Science / Infotronics with a grade of 1.6.
 -   📚 Programming-wise, I'm doing frontend web development with React and TypeScript.
 -   🖥 I'm also familiar with backend development using Python/Django and PHP/Symfony, mobile development with React Native, and Raspberry Pis.
 -   ⚡ Besides programming, I enjoy doing sports, listening to music and going for walks in my free time.
 -   ♿ In my software design, digital accessibility takes priority over visual design in order to include as many people as possible.
+
+<br>
 
 ## ⭐ Featured Project: Full Accessibility Audit
 
@@ -20,6 +24,8 @@
 Measured against the official W3C ACT rules test cases, it reaches a precision of 100 % and a recall of 75 %.
 
 ![audit runs](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/StackOverflowIsBetterThanAnyAI/full-accessibility-audit/badges/downloads.json)
+
+<br>
 
 ## 📦 My Open Source Packages
 
@@ -32,32 +38,38 @@ All my npm packages together are installed this often per month:
 
 ![npm downloads per month](https://img.shields.io/npm-stat/dm/muenzi01)
 
+<br>
+
 ## 🛠 Technologies I Have Worked With
 
 <p>
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" width="40" alt="CSS" title="CSS" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cypressio/cypressio-original.svg" height="40" width="40" alt="Cypress" title="Cypress" />
-    <img src="https://cdn.simpleicons.org/django/092E20/44B78B" height="40" width="40" alt="Django" title="Django" />
-    <img src="https://skillicons.dev/icons?i=docker" height="40" width="40" alt="Docker" title="Docker" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" width="40" alt="Git" title="Git" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" height="40" width="40" alt="GitHub Actions" title="GitHub Actions" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" width="40" alt="HTML" title="HTML" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" width="40" alt="JavaScript" title="JavaScript" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" height="40" width="40" alt="npm" title="npm" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="40" width="40" alt="PHP" title="PHP" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" width="40" alt="Python" title="Python" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" height="40" width="40" alt="Raspberry Pi" title="Raspberry Pi" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" width="40" alt="React and React Native" title="React and React Native" />
-    <img src="https://cdn.simpleicons.org/symfony/000000/ffffff" height="40" width="40" alt="Symfony" title="Symfony" />
-    <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" height="40" width="40" alt="Tailwind CSS" title="Tailwind CSS" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" width="40" alt="TypeScript" title="TypeScript" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" width="40" hspace="6" alt="CSS" title="CSS" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cypressio/cypressio-original.svg" height="40" width="40" hspace="6" alt="Cypress" title="Cypress" />
+    <img src="https://cdn.simpleicons.org/django/092E20/44B78B" height="40" width="40" hspace="6" alt="Django" title="Django" />
+    <img src="https://skillicons.dev/icons?i=docker" height="40" width="40" hspace="6" alt="Docker" title="Docker" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" width="40" hspace="6" alt="Git" title="Git" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" height="40" width="40" hspace="6" alt="GitHub Actions" title="GitHub Actions" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" width="40" hspace="6" alt="HTML" title="HTML" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" width="40" hspace="6" alt="JavaScript" title="JavaScript" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" height="40" width="40" hspace="6" alt="npm" title="npm" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="40" width="40" hspace="6" alt="PHP" title="PHP" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height="40" width="40" hspace="6" alt="Python" title="Python" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg" height="40" width="40" hspace="6" alt="Raspberry Pi" title="Raspberry Pi" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" width="40" hspace="6" alt="React and React Native" title="React and React Native" />
+    <img src="https://cdn.simpleicons.org/symfony/000000/ffffff" height="40" width="40" hspace="6" alt="Symfony" title="Symfony" />
+    <img src="https://cdn.simpleicons.org/tailwindcss/06B6D4" height="40" width="40" hspace="6" alt="Tailwind CSS" title="Tailwind CSS" />
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" width="40" hspace="6" alt="TypeScript" title="TypeScript" />
 </p>
+
+<br>
 
 ## 📈 My GitHub Statistics
 
 ![GitHub stats of Michael: stars, commits, pull requests, issues and reviews](https://github-readme-stats-lilac-iota-24.vercel.app/api?username=StackOverflowIsBetterThanAnyAI&show=reviews&show_icons=true&include_all_commits=true)
 
 ![Most used languages in Michael's repositories](https://github-readme-stats-lilac-iota-24.vercel.app/api/top-langs/?username=StackOverflowIsBetterThanAnyAI&layout=compact)
+
+<br>
 
 ## 👨‍💻 Codewars
 
@@ -76,6 +88,8 @@ All my npm packages together are installed this often per month:
 -   **Python**: 6 kyu (score 138)
 
 <!-- CODEWARS_LANGUAGE_RANKS:end -->
+
+<br>
 
 ## 📫 Contact
 
