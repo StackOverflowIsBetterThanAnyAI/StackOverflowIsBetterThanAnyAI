@@ -37,15 +37,22 @@ jobs:
                   CW_LEADERBOARD=$(jq -r '.leaderboardPosition // empty' codewars.json)
                   CW_COMPLETED=$(jq -r '.codeChallenges.totalCompleted // empty' codewars.json)
                   CW_SCORE=$(jq -r '.ranks.overall.score // empty' codewars.json)
-                  LANG_RANKS=$(jq -r '.ranks.languages | to_entries[] | select(.value.score > 40) | "\(.key): \(.value.name) (Score: \(.value.score))"' codewars.json)
+                  LANG_RANKS=$(jq -r '.ranks.languages | to_entries | sort_by(-.value.score) | .[:3][] | "\(.key)|\(.value.name)|\(.value.score)"' codewars.json)
 
                   TRANSFORMED_LANG_RANKS=""
-                  while IFS= read -r line; do
-                      key=$(echo "$line" | cut -d':' -f1 | sed -e 's/^\(.\)/\U\1/' -e 's/script/Script/')
-                      value=$(echo "$line" | cut -d':' -f2-)
-                      name=$(echo "$value" | sed -E 's/\(Score: [0-9]+\)//' | xargs)
-                      score=$(echo "$value" | grep -oP '(?<=Score: )\d+')
-                      TRANSFORMED_LANG_RANKS="$TRANSFORMED_LANG_RANKS* **$key**: Rank: $name - Score: $score"$'\n'
+                  while IFS='|' read -r key name score; do
+                      [ -z "$key" ] && continue
+                      case "$key" in
+                          javascript) key="JavaScript" ;;
+                          typescript) key="TypeScript" ;;
+                          coffeescript) key="CoffeeScript" ;;
+                          cpp) key="C++" ;;
+                          csharp) key="C#" ;;
+                          sql) key="SQL" ;;
+                          php) key="PHP" ;;
+                          *) key="${key^}" ;;
+                      esac
+                      TRANSFORMED_LANG_RANKS="$TRANSFORMED_LANG_RANKS-   **$key**: $name (score $score)"$'\n'
                   done <<< "$LANG_RANKS"
 
                   echo "CW_LEADERBOARD=$CW_LEADERBOARD" >> $GITHUB_ENV
@@ -70,12 +77,8 @@ jobs:
                   sed -i "s/\*\*Challenges Completed\*\*: [0-9]* <!-- CODEWARS_COMPLETED -->/\*\*Challenges Completed\*\*: $CW_COMPLETED <!-- CODEWARS_COMPLETED -->/" README.md
                   sed -i "s/\*\*Overall Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Overall Score\*\*: $CW_SCORE <!-- CODEWARS_OVERALL_SCORE -->/" README.md
 
-                  sed -i '/<!-- CODEWARS_LANGUAGE_RANKS -->/,$d' README.md
-
-                  echo '<!-- CODEWARS_LANGUAGE_RANKS -->' >> README.md
-                  cat lang_ranks.md >> README.md
-                  
-                  echo "![Lightblue Cloudy Background](https://github.com/StackOverflowIsBetterThanAnyAI/StackOverflowIsBetterThanAnyAI/blob/main/background.png?raw=true)" >> README.md
+                  # only the part between the markers is replaced, the rest of the README stays untouched
+                  RANKS="$(sed '/^$/d' lang_ranks.md)" perl -0pi -e 's/(<!-- CODEWARS_LANGUAGE_RANKS:start -->).*?(<!-- CODEWARS_LANGUAGE_RANKS:end -->)/$1\n\n$ENV{RANKS}\n\n$2/s' README.md
 
             - name: Commit and Push Changes
               run: |
