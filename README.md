@@ -12,8 +12,8 @@
 -   🎓 In July 2026, I finished my master's degree in Applied Computer Science / Infotronics with a grade of 1.6.
 -   📚 Programming-wise, I'm doing frontend web development with React and TypeScript.
 -   🖥 I'm also familiar with backend development using Python/Django and PHP/Symfony, mobile development with React Native, and Raspberry Pis.
--   ⚡ Besides programming, I enjoy doing sports, listening to music and going for walks in my free time.
 -   ♿ In my software design, digital accessibility takes priority over visual design in order to include as many people as possible.
+-   ⚡ Besides programming, I enjoy doing sports, listening to music and going for walks in my free time.
 
 <br>
 
