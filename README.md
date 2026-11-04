@@ -49,7 +49,6 @@ All my npm packages together are installed this often per month:
     <img src="https://skillicons.dev/icons?i=docker" height="40" width="40" hspace="6" alt="Docker" title="Docker" />
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" width="40" hspace="6" alt="Git" title="Git" />
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" height="40" width="40" hspace="6" alt="GitHub Actions" title="GitHub Actions" />
-    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" width="40" hspace="6" alt="HTML" title="HTML" />
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" width="40" hspace="6" alt="JavaScript" title="JavaScript" />
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" height="40" width="40" hspace="6" alt="npm" title="npm" />
     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" height="40" width="40" hspace="6" alt="PHP" title="PHP" />
