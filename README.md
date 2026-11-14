@@ -31,8 +31,8 @@ Measured against the official W3C ACT rules test cases, it reaches a precision o
 
 -   [accessible-color-contrast](https://www.npmjs.com/package/accessible-color-contrast): CLI tool that checks two colors for a high enough contrast in the context of WCAG 2.2
 -   [wcag-compliant-accessible-library](https://www.npmjs.com/package/wcag-compliant-accessible-library): WCAG 2.2 compliant components, closely based on the W3C techniques
--   [fetch-loading](https://www.npmjs.com/package/fetch-loading): loading animation that can be displayed while data is fetched from an API
--   [prettier-es5](https://www.npmjs.com/package/prettier-es5): Prettier settings for trailing commas, tab width, semicolons and single quotes
+-   [fetch-loading](https://www.npmjs.com/package/fetch-loading): Loading animation that can be displayed while data is fetched from an API
+-   [prettier-es5](https://www.npmjs.com/package/prettier-es5): Modern Prettier settings for trailing commas, tab width, semicolons and single quotes
 
 All my npm packages together are installed this often per month:
 
