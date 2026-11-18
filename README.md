@@ -74,15 +74,15 @@ All my npm packages together are installed this often per month:
 
 [![Codewars badge of Michael](https://www.codewars.com/users/muenzi01/badges/large)](https://www.codewars.com/users/muenzi01)
 
--   **Leaderboard Position**: #3943 <!-- CODEWARS_LEADERBOARD -->
--   **Challenges Completed**: 931 <!-- CODEWARS_COMPLETED -->
--   **Overall Score**: 2737 <!-- CODEWARS_OVERALL_SCORE -->
+-   **Leaderboard Position**: #3936 <!-- CODEWARS_LEADERBOARD -->
+-   **Challenges Completed**: 932 <!-- CODEWARS_COMPLETED -->
+-   **Overall Score**: 2745 <!-- CODEWARS_OVERALL_SCORE -->
 
 ### My Top 3 Languages
 
 <!-- CODEWARS_LANGUAGE_RANKS:start -->
 
--   **JavaScript**: 3 kyu (score 2652)
+-   **JavaScript**: 3 kyu (score 2660)
 -   **TypeScript**: 5 kyu (score 375)
 -   **Python**: 6 kyu (score 138)
 
