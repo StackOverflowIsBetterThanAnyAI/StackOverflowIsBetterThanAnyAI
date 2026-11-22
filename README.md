@@ -76,7 +76,7 @@ All my npm packages together are installed this often per month:
 
 -   **Leaderboard Position**: #3818 <!-- CODEWARS_LEADERBOARD -->
 -   **Challenges Completed**: 949 <!-- CODEWARS_COMPLETED -->
--   **Overall Score**: 2819 <!-- CODEWARS_OVERALL_SCORE -->
+-   **Honor Percentile**: Top 0.488% <!-- CODEWARS_PERCENTILE -->
 
 ### My Top 3 Languages
 

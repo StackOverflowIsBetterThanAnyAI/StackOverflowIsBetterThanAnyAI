@@ -23,6 +23,14 @@ jobs:
                   echo "API Response:"
                   cat codewars.json
 
+            - name: Fetch Honor Percentile
+              # not part of the API, so it is read from the public profile page
+              # if Codewars changes the HTML, the old value simply stays in the README
+              run: |
+                  CW_PERCENTILE=$(curl -s -A "Mozilla/5.0" https://www.codewars.com/users/muenzi01 | sed -n 's/.*Honor Percentile:<\/b>\([^<]*\)<.*/\1/p' | head -n 1)
+                  echo "Honor Percentile: $CW_PERCENTILE"
+                  echo "CW_PERCENTILE=$CW_PERCENTILE" >> $GITHUB_ENV
+
             - name: Clear old language ranks
               run: echo "" > lang_ranks.md
 
@@ -36,7 +44,6 @@ jobs:
 
                   CW_LEADERBOARD=$(jq -r '.leaderboardPosition // empty' codewars.json)
                   CW_COMPLETED=$(jq -r '.codeChallenges.totalCompleted // empty' codewars.json)
-                  CW_SCORE=$(jq -r '.ranks.overall.score // empty' codewars.json)
                   LANG_RANKS=$(jq -r '.ranks.languages | to_entries | sort_by(-.value.score) | .[:3][] | "\(.key)|\(.value.name)|\(.value.score)"' codewars.json)
 
                   TRANSFORMED_LANG_RANKS=""
@@ -57,17 +64,15 @@ jobs:
 
                   echo "CW_LEADERBOARD=$CW_LEADERBOARD" >> $GITHUB_ENV
                   echo "CW_COMPLETED=$CW_COMPLETED" >> $GITHUB_ENV
-                  echo "CW_SCORE=$CW_SCORE" >> $GITHUB_ENV
                   echo "$TRANSFORMED_LANG_RANKS" >> lang_ranks.md
 
-                  if [ -z "$CW_LEADERBOARD" ] || [ -z "$CW_COMPLETED" ] || [ -z "$CW_SCORE" ]; then
+                  if [ -z "$CW_LEADERBOARD" ] || [ -z "$CW_COMPLETED" ]; then
                     echo "Error: Failed to extract data from codewars.json"
                     echo "Content of codewars.json:"
                     cat codewars.json
                     echo "Extracted values:"
                     echo "Leaderboard Position: $CW_LEADERBOARD"
                     echo "Challenges Completed: $CW_COMPLETED"
-                    echo "Overall Score: $CW_SCORE"
                     exit 1
                   fi
 
@@ -75,7 +80,9 @@ jobs:
               run: |
                   sed -i "s/\*\*Leaderboard Position\*\*: #[0-9]* <!-- CODEWARS_LEADERBOARD -->/\*\*Leaderboard Position\*\*: #$CW_LEADERBOARD <!-- CODEWARS_LEADERBOARD -->/" README.md
                   sed -i "s/\*\*Challenges Completed\*\*: [0-9]* <!-- CODEWARS_COMPLETED -->/\*\*Challenges Completed\*\*: $CW_COMPLETED <!-- CODEWARS_COMPLETED -->/" README.md
-                  sed -i "s/\*\*Overall Score\*\*:.*<!-- CODEWARS_OVERALL_SCORE -->/\*\*Overall Score\*\*: $CW_SCORE <!-- CODEWARS_OVERALL_SCORE -->/" README.md
+                  if [ -n "$CW_PERCENTILE" ]; then
+                    sed -i "s/\*\*Honor Percentile\*\*:.*<!-- CODEWARS_PERCENTILE -->/\*\*Honor Percentile\*\*: $CW_PERCENTILE <!-- CODEWARS_PERCENTILE -->/" README.md
+                  fi
 
                   # only the part between the markers is replaced, the rest of the README stays untouched
                   RANKS="$(sed '/^$/d' lang_ranks.md)" perl -0pi -e 's/(<!-- CODEWARS_LANGUAGE_RANKS:start -->).*?(<!-- CODEWARS_LANGUAGE_RANKS:end -->)/$1\n\n$ENV{RANKS}\n\n$2/s' README.md
@@ -94,4 +101,4 @@ jobs:
                   cat README.md
                   echo "New Leaderboard Position: ${{ env.CW_LEADERBOARD }}"
                   echo "New Challenges Completed: ${{ env.CW_COMPLETED }}"
-                  echo "New Overall Score: ${{ env.CW_SCORE }}"
+                  echo "New Honor Percentile: ${{ env.CW_PERCENTILE }}"
