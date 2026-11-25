@@ -2,7 +2,6 @@ name: Update README with Language History
 
 on:
     schedule:
-        # once a day, away from the hourly Codewars run
         - cron: '30 3 * * *'
     workflow_dispatch:
     push:
@@ -22,7 +21,6 @@ concurrency:
 jobs:
     update-language-history:
         runs-on: ubuntu-latest
-        # every repository with own commits gets cloned, so give it some room
         timeout-minutes: 30
 
         steps:
@@ -35,9 +33,6 @@ jobs:
                   node-version: 22
 
             - name: Build Heatmap and Table
-              # LANGUAGE_HISTORY_TOKEN is optional: a personal access token with read access
-              # to private repositories, so that their commits are counted as well
-              # (their names are never written to the log or the output files)
               env:
                   GITHUB_TOKEN: ${{ secrets.LANGUAGE_HISTORY_TOKEN || secrets.GITHUB_TOKEN }}
               run: node .github/scripts/language-history.mjs
