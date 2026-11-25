@@ -1,0 +1,51 @@
+name: Update README with Language History
+
+on:
+    schedule:
+        - cron: '30 3 * * *'
+    workflow_dispatch:
+    push:
+        branches:
+            - main
+        paths:
+            - '.github/scripts/language-history.mjs'
+            - '.github/workflows/language-history.yml'
+
+permissions:
+    contents: write
+
+concurrency:
+    group: language-history
+    cancel-in-progress: true
+
+jobs:
+    update-language-history:
+        runs-on: ubuntu-latest
+        timeout-minutes: 30
+
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+
+            - name: Build Heatmap and Table
+              env:
+                  GITHUB_TOKEN: ${{ secrets.LANGUAGE_HISTORY_TOKEN || secrets.GITHUB_TOKEN }}
+              run: node .github/scripts/language-history.mjs
+
+            - name: Commit and Push Changes
+              run: |
+                  git config --local user.email "action@github.com"
+                  git config --local user.name "GitHub Action"
+                  git add README.md language-history
+                  if git diff --staged --quiet; then
+                    echo "No changes"
+                    exit 0
+                  fi
+                  git commit -m "Update README with language history"
+                  git pull --rebase
+                  git push
