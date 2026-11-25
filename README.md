@@ -74,7 +74,7 @@ All my npm packages together are installed this often per month:
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="language-history/heatmap-dark.svg" />
-    <img src="language-history/heatmap-light.svg" alt="Heatmap of the lines of code I changed per month and language, Aug 2023 to Nov 2026. Most changed overall: TypeScript (173,540 lines), JavaScript (32,033 lines), Python (7,465 lines). 2023: mostly TypeScript; 2024: mostly TypeScript; 2025: mostly TypeScript; 2026: mostly TypeScript." width="100%" />
+    <img src="language-history/heatmap-light.svg" alt="Heatmap of the lines of code I changed per month and language, Aug 2023 to Nov 2026. Most changed overall: TypeScript (173,540 lines), JavaScript (32,042 lines), Python (7,465 lines). 2023: mostly TypeScript; 2024: mostly TypeScript; 2025: mostly TypeScript; 2026: mostly TypeScript." width="100%" />
 </picture>
 
 <!-- LANGUAGE_HISTORY:end -->
