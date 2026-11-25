@@ -420,15 +420,6 @@ const updateReadme = (p, desc) => {
     <img src="${OUT_DIR}/heatmap-light.svg" alt="${escapeXml(desc)}" width="100%" />
 </picture>
 
-<details>
-<summary>Table view (lines changed per year)</summary>
-
-${renderTable(p)}
-
-Lines added + deleted in my commits on the default branches, assigned to a language by file type. The monthly numbers are in [data.json](${OUT_DIR}/data.json).
-
-</details>
-
 <!-- LANGUAGE_HISTORY:end -->`
 
     const readme = readFileSync(README, 'utf8')
