@@ -1,0 +1,210 @@
+{
+    "login": "StackOverflowIsBetterThanAnyAI",
+    "generatedAt": "2026-11-25T21:49:28.568Z",
+    "unit": "lines changed (added + deleted)",
+    "repositories": 51,
+    "months": {
+        "2023-08": {
+            "CSS": 259,
+            "TypeScript": 642,
+            "HTML": 86,
+            "JavaScript": 34
+        },
+        "2023-09": {
+            "HTML": 28,
+            "CSS": 385,
+            "TypeScript": 50
+        },
+        "2024-01": {
+            "TypeScript": 60533,
+            "JavaScript": 37
+        },
+        "2024-02": {
+            "JavaScript": 10,
+            "TypeScript": 399
+        },
+        "2024-04": {
+            "TypeScript": 124,
+            "CSS": 57,
+            "HTML": 2
+        },
+        "2024-05": {
+            "TypeScript": 1042,
+            "CSS": 118,
+            "JavaScript": 14,
+            "HTML": 99
+        },
+        "2024-06": {
+            "TypeScript": 7465,
+            "CSS": 490,
+            "JavaScript": 121,
+            "HTML": 318
+        },
+        "2024-07": {
+            "CSS": 497,
+            "TypeScript": 844,
+            "JavaScript": 3209,
+            "HTML": 80,
+            "Python": 866
+        },
+        "2024-08": {
+            "TypeScript": 2282,
+            "HTML": 107,
+            "JavaScript": 164,
+            "CSS": 117
+        },
+        "2024-09": {
+            "HTML": 24,
+            "JavaScript": 201,
+            "CSS": 200,
+            "Python": 923
+        },
+        "2024-10": {
+            "TypeScript": 145
+        },
+        "2024-11": {
+            "Python": 195,
+            "Java": 291
+        },
+        "2024-12": {
+            "CSS": 245,
+            "JavaScript": 6439
+        },
+        "2025-01": {
+            "JavaScript": 1266,
+            "Dockerfile": 26,
+            "CSS": 6
+        },
+        "2025-02": {
+            "TypeScript": 1432,
+            "JavaScript": 643,
+            "CSS": 95
+        },
+        "2025-03": {
+            "CSS": 4,
+            "TypeScript": 214,
+            "JavaScript": 64,
+            "Python": 654
+        },
+        "2025-04": {
+            "JavaScript": 2065,
+            "TypeScript": 8101,
+            "CSS": 141,
+            "HTML": 18,
+            "Python": 822
+        },
+        "2025-05": {
+            "JavaScript": 968,
+            "TypeScript": 6909,
+            "CSS": 243,
+            "HTML": 8,
+            "Python": 536
+        },
+        "2025-06": {
+            "Python": 127
+        },
+        "2025-07": {
+            "Python": 27,
+            "JavaScript": 3816,
+            "HTML": 33
+        },
+        "2025-08": {
+            "JavaScript": 180,
+            "TypeScript": 4985,
+            "HTML": 17,
+            "CSS": 9
+        },
+        "2025-09": {
+            "TypeScript": 9113,
+            "HTML": 244,
+            "JavaScript": 384,
+            "CSS": 859
+        },
+        "2025-10": {
+            "JavaScript": 60,
+            "TypeScript": 7754,
+            "CSS": 16,
+            "Python": 752
+        },
+        "2025-11": {
+            "TypeScript": 2502,
+            "JavaScript": 1833,
+            "CSS": 138,
+            "Python": 147,
+            "C++": 297,
+            "HTML": 17
+        },
+        "2026-01": {
+            "JavaScript": 4
+        },
+        "2026-03": {
+            "TypeScript": 700,
+            "JavaScript": 23,
+            "HTML": 13,
+            "CSS": 296
+        },
+        "2026-04": {
+            "TypeScript": 4903,
+            "Dockerfile": 12,
+            "HTML": 5,
+            "CSS": 185
+        },
+        "2026-05": {
+            "TypeScript": 2637,
+            "HTML": 25,
+            "CSS": 119,
+            "Dockerfile": 12
+        },
+        "2026-06": {
+            "JavaScript": 863,
+            "TypeScript": 1913,
+            "HTML": 6,
+            "Dockerfile": 10
+        },
+        "2026-07": {
+            "Dockerfile": 84,
+            "JavaScript": 81,
+            "TypeScript": 8421,
+            "CSS": 97,
+            "HTML": 29,
+            "Python": 667
+        },
+        "2026-08": {
+            "JavaScript": 919,
+            "HTML": 17,
+            "CSS": 164,
+            "Dockerfile": 44,
+            "TypeScript": 6594,
+            "Python": 816
+        },
+        "2026-09": {
+            "JavaScript": 814,
+            "TypeScript": 3111,
+            "CSS": 454,
+            "Python": 32,
+            "HTML": 35,
+            "PHP": 971,
+            "Twig": 24
+        },
+        "2026-10": {
+            "JavaScript": 2500,
+            "TypeScript": 13826,
+            "HTML": 40,
+            "CSS": 795,
+            "Dockerfile": 158,
+            "PHP": 2018,
+            "Shell": 16
+        },
+        "2026-11": {
+            "JavaScript": 5321,
+            "TypeScript": 16899,
+            "HTML": 1572,
+            "CSS": 724,
+            "Python": 901,
+            "Dockerfile": 21,
+            "PHP": 25,
+            "Shell": 129,
+            "SQL": 8
+        }
+    }
+}
