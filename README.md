@@ -64,7 +64,8 @@ All my npm packages together are installed this often per month:
 
 ## 📈 My GitHub Statistics
 
-![GitHub stats of Michael: stars, commits, pull requests, issues and reviews](https://github-readme-stats-lilac-iota-24.vercel.app/api?username=StackOverflowIsBetterThanAnyAI&show=reviews&show_icons=true&include_all_commits=true)
+<!-- GITHUB_STATS:start -->
+<!-- GITHUB_STATS:end -->
 
 ### My Most Used Languages
 
