@@ -65,6 +65,12 @@ All my npm packages together are installed this often per month:
 ## 📈 My GitHub Statistics
 
 <!-- GITHUB_STATS:start -->
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="github-stats/stats-dark.svg" />
+    <img src="github-stats/stats-light.svg" alt="My GitHub statistics, all time since Jul 2023: Stars earned: 105, Commits: 5,420, Pull requests: 163, Issues: 224, Pull request reviews: 1,657, Contributed to (repositories): 58. Rank A (Top 16 %), calculated like on github-readme-stats." width="100%" />
+</picture>
+
 <!-- GITHUB_STATS:end -->
 
 ### My Most Used Languages
