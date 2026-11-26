@@ -34,9 +34,16 @@ Measured against the official W3C ACT rules test cases, it reaches a precision o
 -   [fetch-loading](https://www.npmjs.com/package/fetch-loading): Loading animation that can be displayed while data is fetched from an API
 -   [prettier-es5](https://www.npmjs.com/package/prettier-es5): Modern Prettier settings for trailing commas, tab width, semicolons and single quotes
 
-All my npm packages together are installed this often per month:
+How often my npm packages are downloaded per month:
 
-![npm downloads per month](https://img.shields.io/npm-stat/dm/muenzi01)
+<!-- NPM_DOWNLOADS:start -->
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="npm-downloads/downloads-dark.svg" />
+    <img src="npm-downloads/downloads-light.svg" alt="Stacked bar chart of the monthly npm downloads of my packages, Feb 2024 to Oct 2026. 2,008 downloads in the last 30 days, 24,642 in total: prettier-es5 18,095, fetch-loading 4,355, wcag-compliant-accessible-library 1,313, accessible-color-contrast 879. Busiest month: Jun 2026 with 1,798 downloads." width="100%" />
+</picture>
+
+<!-- NPM_DOWNLOADS:end -->
 
 <br>
 

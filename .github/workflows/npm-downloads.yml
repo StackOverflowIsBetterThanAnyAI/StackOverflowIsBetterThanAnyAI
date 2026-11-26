@@ -1,0 +1,50 @@
+name: Update README with npm Downloads
+
+on:
+    schedule:
+        - cron: '45 3 * * *'
+    workflow_dispatch:
+    push:
+        branches:
+            - main
+        paths:
+            - '.github/scripts/npm-downloads.mjs'
+            - '.github/scripts/shared.mjs'
+            - '.github/workflows/npm-downloads.yml'
+
+permissions:
+    contents: write
+
+concurrency:
+    group: npm-downloads
+    cancel-in-progress: true
+
+jobs:
+    update-npm-downloads:
+        runs-on: ubuntu-latest
+        timeout-minutes: 10
+
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+
+            - name: Build Downloads Chart
+              run: node .github/scripts/npm-downloads.mjs
+
+            - name: Commit and Push Changes
+              run: |
+                  git config --local user.email "action@github.com"
+                  git config --local user.name "GitHub Action"
+                  git add README.md npm-downloads
+                  if git diff --staged --quiet; then
+                    echo "No changes"
+                    exit 0
+                  fi
+                  git commit -m "Update README with npm downloads"
+                  git pull --rebase
+                  git push
