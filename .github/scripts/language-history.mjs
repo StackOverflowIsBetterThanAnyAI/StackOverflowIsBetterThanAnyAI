@@ -395,6 +395,72 @@ const describe = (p) => {
     return `Heatmap of the lines of code I changed per month and language, ${monthLabel(p.columns[0])} to ${monthLabel(p.end)}. Most changed overall: ${top3}. ${perYear}.`
 }
 
+const MAX_RANKED = 8 // bars in the ranking, the rest is folded into "Other"
+
+const rankLanguages = (data) => {
+    const totals = {}
+    for (const langs of Object.values(data.months)) {
+        for (const [name, lines] of Object.entries(langs)) totals[name] = (totals[name] || 0) + lines
+    }
+    const ranked = Object.entries(totals).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+    const sum = ranked.reduce((s, [, v]) => s + v, 0)
+    const rows = ranked.length > MAX_RANKED ? ranked.slice(0, MAX_RANKED - 1) : ranked
+    if (ranked.length > rows.length) {
+        rows.push([OTHER, ranked.slice(rows.length).reduce((s, [, v]) => s + v, 0)])
+    }
+    return rows.map(([language, lines]) => ({ language, lines, share: (lines / sum) * 100 }))
+}
+
+const percent = (share) => `${share < 0.1 ? '<0.1' : share.toFixed(1)} %`
+
+const renderRankingSvg = (rows, theme, title, desc) => {
+    const t = THEMES[theme]
+    const font =
+        "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif"
+
+    const width = 800
+    const left = 112 // language names
+    const right = 136 // percentage and lines
+    const top = 24
+    const rowPitch = 24
+    const barHeight = 14
+    const height = top + rows.length * rowPitch + 36
+    const barMax = width - 24 - left - right
+    const maxShare = rows[0].share
+
+    const out = [
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="title desc">`,
+        `<title id="title">${escapeXml(title)}</title>`,
+        `<desc id="desc">${escapeXml(desc)}</desc>`,
+        `<rect width="${width}" height="${height}" rx="6" fill="${t.surface}"/>`,
+        `<g font-family="${font}" font-size="12">`,
+    ]
+    rows.forEach((row, i) => {
+        const y = top + i * rowPitch
+        const barWidth = Math.max(2, (row.share / maxShare) * barMax)
+        const fill = row.language === OTHER ? t.muted : t.steps[3]
+        out.push(
+            `<text x="${24 + left - 10}" y="${y + 11.5}" text-anchor="end" fill="${t.text}">${escapeXml(row.language)}</text>`,
+            `<rect x="${24 + left}" y="${y}" width="${barMax}" height="${barHeight}" rx="2" fill="${t.empty}"/>`,
+            `<rect x="${24 + left}" y="${y}" width="${barWidth.toFixed(1)}" height="${barHeight}" rx="2" fill="${fill}"/>`,
+            `<text x="${24 + left + barMax + 10}" y="${y + 11.5}" fill="${t.text}">${percent(row.share)}</text>`,
+            `<text x="${width - 24}" y="${y + 11.5}" text-anchor="end" fill="${t.muted}">${compact(row.lines)} lines</text>`
+        )
+    })
+    out.push(
+        `<text x="24" y="${height - 14}" fill="${t.muted}">Share of all lines added + deleted in my commits, by file type. Dependencies, build output and generated files are excluded.</text>`,
+        '</g>',
+        '</svg>',
+        ''
+    )
+    return out.join('\n')
+}
+
+const describeRanking = (rows) =>
+    `Bar chart of the languages I write the most, measured by the lines of code I changed: ${rows
+        .map((r) => `${r.language} ${percent(r.share)} (${fmt(r.lines)} lines)`)
+        .join(', ')}.`
+
 const renderTable = (p) => {
     const years = [...new Set(p.columns.map((c) => c.slice(0, 4)))]
     const current = p.end.slice(0, 4)
@@ -412,20 +478,26 @@ const renderTable = (p) => {
     return [header, align, ...body].join('\n')
 }
 
-const updateReadme = (p, desc) => {
-    const block = `<!-- LANGUAGE_HISTORY:start -->
+// only the part between the markers is replaced, the rest of the README stays untouched
+const replaceBlock = (readme, marker, image, desc) => {
+    const block = `<!-- ${marker}:start -->
 
 <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="${OUT_DIR}/heatmap-dark.svg" />
-    <img src="${OUT_DIR}/heatmap-light.svg" alt="${escapeXml(desc)}" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="${OUT_DIR}/${image}-dark.svg" />
+    <img src="${OUT_DIR}/${image}-light.svg" alt="${escapeXml(desc)}" width="100%" />
 </picture>
 
-<!-- LANGUAGE_HISTORY:end -->`
+<!-- ${marker}:end -->`
+    const pattern = new RegExp(`<!-- ${marker}:start -->[\\s\\S]*?<!-- ${marker}:end -->`)
+    if (!pattern.test(readme)) throw new Error(`${marker} markers not found in README.md`)
+    return readme.replace(pattern, () => block)
+}
 
-    const readme = readFileSync(README, 'utf8')
-    const pattern = /<!-- LANGUAGE_HISTORY:start -->[\s\S]*?<!-- LANGUAGE_HISTORY:end -->/
-    if (!pattern.test(readme)) throw new Error('LANGUAGE_HISTORY markers not found in README.md')
-    writeFileSync(README, readme.replace(pattern, () => block))
+const updateReadme = (heatmapDesc, rankingDesc) => {
+    let readme = readFileSync(README, 'utf8')
+    readme = replaceBlock(readme, 'LANGUAGE_RANKING', 'ranking', rankingDesc)
+    readme = replaceBlock(readme, 'LANGUAGE_HISTORY', 'heatmap', heatmapDesc)
+    writeFileSync(README, readme)
 }
 
 const main = async () => {
@@ -446,8 +518,16 @@ const main = async () => {
     if (!fixture) writeFileSync(`${OUT_DIR}/data.json`, JSON.stringify(data, null, 4) + '\n')
     writeFileSync(`${OUT_DIR}/heatmap-light.svg`, renderSvg(prepared, 'light', title, desc))
     writeFileSync(`${OUT_DIR}/heatmap-dark.svg`, renderSvg(prepared, 'dark', title, desc))
-    updateReadme(prepared, desc)
 
+    const ranking = rankLanguages(data)
+    const rankingDesc = describeRanking(ranking)
+    const rankingTitle = 'Most used languages'
+    writeFileSync(`${OUT_DIR}/ranking-light.svg`, renderRankingSvg(ranking, 'light', rankingTitle, rankingDesc))
+    writeFileSync(`${OUT_DIR}/ranking-dark.svg`, renderRankingSvg(ranking, 'dark', rankingTitle, rankingDesc))
+
+    updateReadme(desc, rankingDesc)
+
+    console.log(rankingDesc)
     console.log(desc)
     console.log(renderTable(prepared))
 }

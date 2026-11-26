@@ -66,7 +66,16 @@ All my npm packages together are installed this often per month:
 
 ![GitHub stats of Michael: stars, commits, pull requests, issues and reviews](https://github-readme-stats-lilac-iota-24.vercel.app/api?username=StackOverflowIsBetterThanAnyAI&show=reviews&show_icons=true&include_all_commits=true)
 
-![Most used languages in Michael's repositories](https://github-readme-stats-lilac-iota-24.vercel.app/api/top-langs/?username=StackOverflowIsBetterThanAnyAI&layout=compact)
+### My Most Used Languages
+
+<!-- LANGUAGE_RANKING:start -->
+
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="language-history/ranking-dark.svg" />
+    <img src="language-history/ranking-light.svg" alt="Bar chart of the languages I write the most, measured by the lines of code I changed: TypeScript 76.5 % (173,540 lines), JavaScript 14.1 % (32,033 lines), Python 3.3 % (7,465 lines), CSS 3.0 % (6,713 lines), PHP 1.3 % (3,014 lines), HTML 1.2 % (2,823 lines), Dockerfile 0.2 % (367 lines), Other 0.3 % (765 lines)." width="100%" />
+</picture>
+
+<!-- LANGUAGE_RANKING:end -->
 
 ### My Coding Activity per Language Over Time
 

@@ -32,7 +32,7 @@ jobs:
               with:
                   node-version: 22
 
-            - name: Build Heatmap and Table
+            - name: Build Heatmap and Language Ranking
               env:
                   GITHUB_TOKEN: ${{ secrets.LANGUAGE_HISTORY_TOKEN || secrets.GITHUB_TOKEN }}
               run: node .github/scripts/language-history.mjs
