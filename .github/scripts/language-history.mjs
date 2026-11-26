@@ -395,20 +395,14 @@ const describe = (p) => {
     return `Heatmap of the lines of code I changed per month and language, ${monthLabel(p.columns[0])} to ${monthLabel(p.end)}. Most changed overall: ${top3}. ${perYear}.`
 }
 
-const MAX_RANKED = 8 // bars in the ranking, the rest is folded into "Other"
-
-const rankLanguages = (data) => {
-    const totals = {}
-    for (const langs of Object.values(data.months)) {
-        for (const [name, lines] of Object.entries(langs)) totals[name] = (totals[name] || 0) + lines
-    }
-    const ranked = Object.entries(totals).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
-    const sum = ranked.reduce((s, [, v]) => s + v, 0)
-    const rows = ranked.length > MAX_RANKED ? ranked.slice(0, MAX_RANKED - 1) : ranked
-    if (ranked.length > rows.length) {
-        rows.push([OTHER, ranked.slice(rows.length).reduce((s, [, v]) => s + v, 0)])
-    }
-    return rows.map(([language, lines]) => ({ language, lines, share: (lines / sum) * 100 }))
+// same languages and totals as the heatmap rows, so both charts always match
+const rankLanguages = (p) => {
+    const sum = p.languages.reduce((s, l) => s + p.languageTotals[l], 0)
+    return p.languages.map((language) => ({
+        language,
+        lines: p.languageTotals[language],
+        share: (p.languageTotals[language] / sum) * 100,
+    }))
 }
 
 const percent = (share) => `${share < 0.1 ? '<0.1' : share.toFixed(1)} %`
@@ -443,7 +437,7 @@ const renderRankingSvg = (rows, theme, title, desc) => {
             `<text x="${24 + left - 10}" y="${y + 11.5}" text-anchor="end" fill="${t.text}">${escapeXml(row.language)}</text>`,
             `<rect x="${24 + left}" y="${y}" width="${barMax}" height="${barHeight}" rx="2" fill="${t.empty}"/>`,
             `<rect x="${24 + left}" y="${y}" width="${barWidth.toFixed(1)}" height="${barHeight}" rx="2" fill="${fill}"/>`,
-            `<text x="${24 + left + barMax + 10}" y="${y + 11.5}" fill="${t.text}">${percent(row.share)}</text>`,
+            `<text x="${24 + left + barMax + 10}" y="${y + 11.5}" fill="${t.text}">${escapeXml(percent(row.share))}</text>`,
             `<text x="${width - 24}" y="${y + 11.5}" text-anchor="end" fill="${t.muted}">${compact(row.lines)} lines</text>`
         )
     })
@@ -519,7 +513,7 @@ const main = async () => {
     writeFileSync(`${OUT_DIR}/heatmap-light.svg`, renderSvg(prepared, 'light', title, desc))
     writeFileSync(`${OUT_DIR}/heatmap-dark.svg`, renderSvg(prepared, 'dark', title, desc))
 
-    const ranking = rankLanguages(data)
+    const ranking = rankLanguages(prepared)
     const rankingDesc = describeRanking(ranking)
     const rankingTitle = 'Most used languages'
     writeFileSync(`${OUT_DIR}/ranking-light.svg`, renderRankingSvg(ranking, 'light', rankingTitle, rankingDesc))
