@@ -21,6 +21,11 @@
 
 [Full Accessibility Audit](https://github.com/StackOverflowIsBetterThanAnyAI/full-accessibility-audit) is a GitHub Actions workflow that crawls a web application, including pages behind a login, and audits every page against WCAG 2.2 with axe-core and additional custom checks.
 
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="featured-project/audit-workflow-dark.svg" />
+    <img src="featured-project/audit-workflow-light.svg" alt="How the Full Accessibility Audit works: 1. Crawl: finds every page, also behind a login. 2. Audit: mobile and desktop, with and without state. 3. Check: WCAG 2.2 via axe-core plus own checks. 4. Report: JSON and Markdown, fails on A and AA issues." width="520" />
+</picture>
+
 Measured against the official W3C ACT rules test cases, it reaches a precision of 100 % and a recall of 75 %.
 
 ![audit runs](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/StackOverflowIsBetterThanAnyAI/full-accessibility-audit/badges/downloads.json)
