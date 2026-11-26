@@ -1,0 +1,52 @@
+name: Update README with GitHub Stats
+
+on:
+    schedule:
+        - cron: '15 3 * * *'
+    workflow_dispatch:
+    push:
+        branches:
+            - main
+        paths:
+            - '.github/scripts/github-stats.mjs'
+            - '.github/scripts/shared.mjs'
+            - '.github/workflows/github-stats.yml'
+
+permissions:
+    contents: write
+
+concurrency:
+    group: github-stats
+    cancel-in-progress: true
+
+jobs:
+    update-github-stats:
+        runs-on: ubuntu-latest
+        timeout-minutes: 10
+
+        steps:
+            - name: Checkout Repository
+              uses: actions/checkout@v4
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 22
+
+            - name: Build Stats Card
+              env:
+                  GITHUB_TOKEN: ${{ secrets.LANGUAGE_HISTORY_TOKEN || secrets.GITHUB_TOKEN }}
+              run: node .github/scripts/github-stats.mjs
+
+            - name: Commit and Push Changes
+              run: |
+                  git config --local user.email "action@github.com"
+                  git config --local user.name "GitHub Action"
+                  git add README.md github-stats
+                  if git diff --staged --quiet; then
+                    echo "No changes"
+                    exit 0
+                  fi
+                  git commit -m "Update README with GitHub stats"
+                  git pull --rebase
+                  git push

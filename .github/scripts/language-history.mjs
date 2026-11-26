@@ -2,10 +2,10 @@ import { readFileSync, writeFileSync, mkdirSync, mkdtempSync, rmSync } from 'nod
 import { spawnSync } from 'node:child_process'
 import { tmpdir } from 'node:os'
 import { join, basename } from 'node:path'
+import { THEMES, FONT, escapeXml, fmt, graphql, replaceReadmeBlock } from './shared.mjs'
 
 const LOGIN = process.env.GITHUB_LOGIN || 'StackOverflowIsBetterThanAnyAI'
 const OUT_DIR = 'language-history'
-const README = 'README.md'
 const MAX_LANGUAGES = 10 // everything beyond this is folded into "Other"
 const MAX_REPO_SIZE_KB = 1024 * 1024
 const OTHER = 'Other'
@@ -49,23 +49,6 @@ const languageOf = (path) => {
 
 const newPath = (path) =>
     path.replace(/\{[^{}]* => ([^{}]*)\}/g, '$1').replace(/^.* => /, '').replace(/\/\//g, '/')
-
-const graphql = async (query, variables = {}) => {
-    const res = await fetch('https://api.github.com/graphql', {
-        method: 'POST',
-        headers: {
-            Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
-            'Content-Type': 'application/json',
-            'User-Agent': 'language-history-workflow',
-        },
-        body: JSON.stringify({ query, variables }),
-    })
-    const json = await res.json()
-    if (!res.ok || json.errors) {
-        throw new Error(`GraphQL request failed: ${JSON.stringify(json.errors || json)}`)
-    }
-    return json.data
-}
 
 const REPO_FIELDS = 'nameWithOwner isPrivate isFork diskUsage defaultBranchRef { name }'
 
@@ -262,32 +245,12 @@ const prepare = (data) => {
     return { columns, languages, value, languageTotals, bins, binOf, end, generatedAt: data.generatedAt }
 }
 
-const THEMES = {
-    light: {
-        surface: '#ffffff',
-        text: '#1f2328',
-        muted: '#59636e',
-        empty: '#eff2f5',
-        steps: ['#b7d3f6', '#6da7ec', '#2a78d6', '#1c5cab', '#0d366b'],
-    },
-    dark: {
-        surface: '#0d1117',
-        text: '#f0f6fc',
-        muted: '#9198a1',
-        empty: '#161b22',
-        steps: ['#184f95', '#256abf', '#3987e5', '#6da7ec', '#b7d3f6'],
-    },
-}
-
-const escapeXml = (s) => String(s).replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`)
-const fmt = (n) => n.toLocaleString('en-US')
 const compact = (n) =>
     n >= 10000 ? `${Math.round(n / 1000)}k` : n >= 1000 ? `${(n / 1000).toFixed(1).replace(/\.0$/, '')}k` : String(n)
 
 const renderSvg = (p, theme, title, desc) => {
     const t = THEMES[theme]
-    const font =
-        "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif"
+    const font = FONT
 
     const width = 800
     const left = 112 // language names
@@ -409,8 +372,7 @@ const percent = (share) => `${share < 0.1 ? '<0.1' : share.toFixed(1)} %`
 
 const renderRankingSvg = (rows, theme, title, desc) => {
     const t = THEMES[theme]
-    const font =
-        "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif"
+    const font = FONT
 
     const width = 800
     const left = 112 // language names
@@ -472,28 +434,6 @@ const renderTable = (p) => {
     return [header, align, ...body].join('\n')
 }
 
-// only the part between the markers is replaced, the rest of the README stays untouched
-const replaceBlock = (readme, marker, image, desc) => {
-    const block = `<!-- ${marker}:start -->
-
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="${OUT_DIR}/${image}-dark.svg" />
-    <img src="${OUT_DIR}/${image}-light.svg" alt="${escapeXml(desc)}" width="100%" />
-</picture>
-
-<!-- ${marker}:end -->`
-    const pattern = new RegExp(`<!-- ${marker}:start -->[\\s\\S]*?<!-- ${marker}:end -->`)
-    if (!pattern.test(readme)) throw new Error(`${marker} markers not found in README.md`)
-    return readme.replace(pattern, () => block)
-}
-
-const updateReadme = (heatmapDesc, rankingDesc) => {
-    let readme = readFileSync(README, 'utf8')
-    readme = replaceBlock(readme, 'LANGUAGE_RANKING', 'ranking', rankingDesc)
-    readme = replaceBlock(readme, 'LANGUAGE_HISTORY', 'heatmap', heatmapDesc)
-    writeFileSync(README, readme)
-}
-
 const main = async () => {
     const fixture = process.env.LANGUAGE_HISTORY_FIXTURE
     if (!fixture && !process.env.LANGUAGE_HISTORY_REPOS && !process.env.GITHUB_TOKEN) {
@@ -519,7 +459,8 @@ const main = async () => {
     writeFileSync(`${OUT_DIR}/ranking-light.svg`, renderRankingSvg(ranking, 'light', rankingTitle, rankingDesc))
     writeFileSync(`${OUT_DIR}/ranking-dark.svg`, renderRankingSvg(ranking, 'dark', rankingTitle, rankingDesc))
 
-    updateReadme(desc, rankingDesc)
+    replaceReadmeBlock('LANGUAGE_RANKING', OUT_DIR, 'ranking', rankingDesc)
+    replaceReadmeBlock('LANGUAGE_HISTORY', OUT_DIR, 'heatmap', desc)
 
     console.log(rankingDesc)
     console.log(desc)
