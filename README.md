@@ -121,4 +121,7 @@ All my npm packages together are installed this often per month:
 
 You can reach me on [LinkedIn](https://www.linkedin.com/in/michael-m%C3%BCnzenhofer-31a092270/).
 
-<img src="background.png" alt="" width="100%" />
+<picture>
+    <source media="(prefers-color-scheme: dark)" srcset="background.png" />
+    <img src="background-light.png" alt="" width="100%" />
+</picture>
