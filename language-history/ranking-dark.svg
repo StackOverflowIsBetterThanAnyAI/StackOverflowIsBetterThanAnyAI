@@ -1,17 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="300" viewBox="0 0 800 300" role="img" aria-labelledby="title desc">
 <title id="title">Most used languages</title>
-<desc id="desc">Bar chart of the languages I write the most, measured by the lines of code I changed: TypeScript 76.4 % (173,540 lines), JavaScript 14.3 % (32,519 lines), Python 3.3 % (7,465 lines), CSS 3.0 % (6,713 lines), PHP 1.3 % (3,014 lines), HTML 1.2 % (2,823 lines), Dockerfile 0.2 % (367 lines), C++ 0.1 % (297 lines), Java 0.1 % (291 lines), Other &#60;0.1 % (177 lines).</desc>
+<desc id="desc">Bar chart of the languages I write the most, measured by the lines of code I changed: TypeScript 76.2 % (173,540 lines), JavaScript 14.5 % (32,916 lines), Python 3.3 % (7,465 lines), CSS 2.9 % (6,713 lines), PHP 1.3 % (3,014 lines), HTML 1.2 % (2,823 lines), Dockerfile 0.2 % (367 lines), C++ 0.1 % (297 lines), Java 0.1 % (291 lines), Other &#60;0.1 % (177 lines).</desc>
 <rect width="800" height="300" rx="6" fill="#0d1117"/>
 <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12">
 <text x="126" y="35.5" text-anchor="end" fill="#f0f6fc">TypeScript</text>
 <rect x="136" y="24" width="528" height="14" rx="2" fill="#161b22"/>
 <rect x="136" y="24" width="528.0" height="14" rx="2" fill="#6da7ec"/>
-<text x="674" y="35.5" fill="#f0f6fc">76.4 %</text>
+<text x="674" y="35.5" fill="#f0f6fc">76.2 %</text>
 <text x="776" y="35.5" text-anchor="end" fill="#9198a1">174k lines</text>
 <text x="126" y="59.5" text-anchor="end" fill="#f0f6fc">JavaScript</text>
 <rect x="136" y="48" width="528" height="14" rx="2" fill="#161b22"/>
-<rect x="136" y="48" width="98.9" height="14" rx="2" fill="#6da7ec"/>
-<text x="674" y="59.5" fill="#f0f6fc">14.3 %</text>
+<rect x="136" y="48" width="100.1" height="14" rx="2" fill="#6da7ec"/>
+<text x="674" y="59.5" fill="#f0f6fc">14.5 %</text>
 <text x="776" y="59.5" text-anchor="end" fill="#9198a1">33k lines</text>
 <text x="126" y="83.5" text-anchor="end" fill="#f0f6fc">Python</text>
 <rect x="136" y="72" width="528" height="14" rx="2" fill="#161b22"/>
@@ -21,7 +21,7 @@
 <text x="126" y="107.5" text-anchor="end" fill="#f0f6fc">CSS</text>
 <rect x="136" y="96" width="528" height="14" rx="2" fill="#161b22"/>
 <rect x="136" y="96" width="20.4" height="14" rx="2" fill="#6da7ec"/>
-<text x="674" y="107.5" fill="#f0f6fc">3.0 %</text>
+<text x="674" y="107.5" fill="#f0f6fc">2.9 %</text>
 <text x="776" y="107.5" text-anchor="end" fill="#9198a1">6.7k lines</text>
 <text x="126" y="131.5" text-anchor="end" fill="#f0f6fc">PHP</text>
 <rect x="136" y="120" width="528" height="14" rx="2" fill="#161b22"/>

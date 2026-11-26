@@ -91,7 +91,7 @@ How often my npm packages are downloaded per month:
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="language-history/ranking-dark.svg" />
-    <img src="language-history/ranking-light.svg" alt="Bar chart of the languages I write the most, measured by the lines of code I changed: TypeScript 76.4 % (173,540 lines), JavaScript 14.3 % (32,519 lines), Python 3.3 % (7,465 lines), CSS 3.0 % (6,713 lines), PHP 1.3 % (3,014 lines), HTML 1.2 % (2,823 lines), Dockerfile 0.2 % (367 lines), C++ 0.1 % (297 lines), Java 0.1 % (291 lines), Other &#60;0.1 % (177 lines)." width="100%" />
+    <img src="language-history/ranking-light.svg" alt="Bar chart of the languages I write the most, measured by the lines of code I changed: TypeScript 76.2 % (173,540 lines), JavaScript 14.5 % (32,916 lines), Python 3.3 % (7,465 lines), CSS 2.9 % (6,713 lines), PHP 1.3 % (3,014 lines), HTML 1.2 % (2,823 lines), Dockerfile 0.2 % (367 lines), C++ 0.1 % (297 lines), Java 0.1 % (291 lines), Other &#60;0.1 % (177 lines)." width="100%" />
 </picture>
 
 <!-- LANGUAGE_RANKING:end -->
@@ -102,7 +102,7 @@ How often my npm packages are downloaded per month:
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="language-history/heatmap-dark.svg" />
-    <img src="language-history/heatmap-light.svg" alt="Heatmap of the lines of code I changed per month and language, Aug 2023 to Nov 2026. Most changed overall: TypeScript (173,540 lines), JavaScript (32,519 lines), Python (7,465 lines). 2023: mostly TypeScript; 2024: mostly TypeScript; 2025: mostly TypeScript; 2026: mostly TypeScript." width="100%" />
+    <img src="language-history/heatmap-light.svg" alt="Heatmap of the lines of code I changed per month and language, Aug 2023 to Nov 2026. Most changed overall: TypeScript (173,540 lines), JavaScript (32,916 lines), Python (7,465 lines). 2023: mostly TypeScript; 2024: mostly TypeScript; 2025: mostly TypeScript; 2026: mostly TypeScript." width="100%" />
 </picture>
 
 <!-- LANGUAGE_HISTORY:end -->
