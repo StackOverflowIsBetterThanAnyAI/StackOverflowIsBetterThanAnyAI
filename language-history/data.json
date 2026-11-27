@@ -1,6 +1,6 @@
 {
     "login": "StackOverflowIsBetterThanAnyAI",
-    "generatedAt": "2026-11-26T12:56:58.939Z",
+    "generatedAt": "2026-11-27T12:53:01.266Z",
     "unit": "lines changed (added + deleted)",
     "repositories": 51,
     "months": {
@@ -196,10 +196,10 @@
             "Shell": 16
         },
         "2026-11": {
-            "JavaScript": 6204,
-            "TypeScript": 16899,
+            "JavaScript": 6315,
+            "TypeScript": 55679,
+            "CSS": 916,
             "HTML": 1572,
-            "CSS": 724,
             "Python": 901,
             "Dockerfile": 21,
             "PHP": 25,
