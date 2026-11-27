@@ -113,15 +113,15 @@ How often my npm packages are downloaded per month:
 
 [![Codewars badge of Michael](https://www.codewars.com/users/muenzi01/badges/large)](https://www.codewars.com/users/muenzi01)
 
--   **Leaderboard Position**: #3751 <!-- CODEWARS_LEADERBOARD -->
--   **Challenges Completed**: 957 <!-- CODEWARS_COMPLETED -->
+-   **Leaderboard Position**: #3747 <!-- CODEWARS_LEADERBOARD -->
+-   **Challenges Completed**: 958 <!-- CODEWARS_COMPLETED -->
 -   **Honor Percentile**: Top 0.485% <!-- CODEWARS_PERCENTILE -->
 
 ### My Top 3 Languages
 
 <!-- CODEWARS_LANGUAGE_RANKS:start -->
 
--   **JavaScript**: 3 kyu (score 2768)
+-   **JavaScript**: 3 kyu (score 2771)
 -   **TypeScript**: 5 kyu (score 375)
 -   **Python**: 6 kyu (score 138)
 
