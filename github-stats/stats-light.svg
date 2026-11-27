@@ -1,15 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="256" viewBox="0 0 800 256" role="img" aria-labelledby="title desc">
 <title id="title">GitHub statistics</title>
-<desc id="desc">My GitHub statistics, all time since Jul 2023: Stars earned: 105, Commits: 5,420, Pull requests: 163, Issues: 224, Pull request reviews: 1,657, Contributed to (repositories): 58. Rank A (Top 16 %), calculated like on github-readme-stats.</desc>
+<desc id="desc">My GitHub statistics, all time since Jul 2023: Stars earned: 105, Commits: 5,478, Pull requests: 168, Issues: 224, Pull request reviews: 1,657, Contributed to (repositories): 58. Rank A (Top 16 %), calculated like on github-readme-stats.</desc>
 <rect width="800" height="256" rx="6" fill="#ffffff"/>
 <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="14">
 <text x="24" y="30" font-size="12" fill="#59636e">All time, since Jul 2023</text>
 <text x="24" y="64" fill="#1f2328">Stars earned</text>
 <text x="400" y="64" text-anchor="end" font-weight="600" fill="#1f2328">105</text>
 <text x="24" y="92" fill="#1f2328">Commits</text>
-<text x="400" y="92" text-anchor="end" font-weight="600" fill="#1f2328">5,420</text>
+<text x="400" y="92" text-anchor="end" font-weight="600" fill="#1f2328">5,478</text>
 <text x="24" y="120" fill="#1f2328">Pull requests</text>
-<text x="400" y="120" text-anchor="end" font-weight="600" fill="#1f2328">163</text>
+<text x="400" y="120" text-anchor="end" font-weight="600" fill="#1f2328">168</text>
 <text x="24" y="148" fill="#1f2328">Issues</text>
 <text x="400" y="148" text-anchor="end" font-weight="600" fill="#1f2328">224</text>
 <text x="24" y="176" fill="#1f2328">Pull request reviews</text>
@@ -17,7 +17,7 @@
 <text x="24" y="204" fill="#1f2328">Contributed to (repositories)</text>
 <text x="400" y="204" text-anchor="end" font-weight="600" fill="#1f2328">58</text>
 <circle cx="686" cy="126" r="52" fill="none" stroke="#eff2f5" stroke-width="8"/>
-<circle cx="686" cy="126" r="52" fill="none" stroke="#1c5cab" stroke-width="8" stroke-linecap="round" stroke-dasharray="275.2 326.7" transform="rotate(-90 686 126)"/>
+<circle cx="686" cy="126" r="52" fill="none" stroke="#1c5cab" stroke-width="8" stroke-linecap="round" stroke-dasharray="275.8 326.7" transform="rotate(-90 686 126)"/>
 <text x="686" y="137" text-anchor="middle" font-size="32" font-weight="700" fill="#1f2328">A</text>
 <text x="686" y="206" text-anchor="middle" font-size="12" fill="#59636e">Top 16 %</text>
 <text x="24" y="242" font-size="12" fill="#59636e">Rank calculated with the formula and inputs of github-readme-stats, so it stays comparable.</text>
