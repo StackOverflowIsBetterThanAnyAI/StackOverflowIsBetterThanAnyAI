@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="364" viewBox="0 0 800 364" role="img" aria-labelledby="title desc">
 <title id="title">npm downloads per month</title>
-<desc id="desc">Stacked bar chart of the monthly npm downloads of my packages, Feb 2024 to Oct 2026. 2,230 downloads in the last 30 days, 24,667 in total: prettier-es5 18,108, fetch-loading 4,362, wcag-compliant-accessible-library 1,317, accessible-color-contrast 880. Busiest month: Jun 2026 with 1,798 downloads.</desc>
+<desc id="desc">Stacked bar chart of the monthly npm downloads of my packages, Feb 2024 to Oct 2026. 2,253 downloads in the last 30 days, 24,667 in total: prettier-es5 18,108, fetch-loading 4,362, wcag-compliant-accessible-library 1,317, accessible-color-contrast 880. Busiest month: Jun 2026 with 1,798 downloads.</desc>
 <rect width="800" height="364" rx="6" fill="#0d1117"/>
 <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, sans-serif" font-size="12">
-<text x="24" y="30" fill="#f0f6fc"><tspan font-weight="600">2,230</tspan> downloads in the last 30 days · <tspan font-weight="600">24,667</tspan> since Feb 2024</text>
+<text x="24" y="30" fill="#f0f6fc"><tspan font-weight="600">2,253</tspan> downloads in the last 30 days · <tspan font-weight="600">24,667</tspan> since Feb 2024</text>
 <rect x="24" y="44" width="12" height="12" rx="2" fill="#3987e5"/>
 <text x="42" y="54.5" fill="#f0f6fc">accessible-color-contrast <tspan fill="#9198a1">880</tspan></text>
 <rect x="404" y="44" width="12" height="12" rx="2" fill="#d95926"/>

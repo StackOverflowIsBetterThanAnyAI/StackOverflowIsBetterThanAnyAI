@@ -45,7 +45,7 @@ How often my npm packages are downloaded per month:
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="npm-downloads/downloads-dark.svg" />
-    <img src="npm-downloads/downloads-light.svg" alt="Stacked bar chart of the monthly npm downloads of my packages, Feb 2024 to Oct 2026. 2,230 downloads in the last 30 days, 24,667 in total: prettier-es5 18,108, fetch-loading 4,362, wcag-compliant-accessible-library 1,317, accessible-color-contrast 880. Busiest month: Jun 2026 with 1,798 downloads." width="100%" />
+    <img src="npm-downloads/downloads-light.svg" alt="Stacked bar chart of the monthly npm downloads of my packages, Feb 2024 to Oct 2026. 2,253 downloads in the last 30 days, 24,667 in total: prettier-es5 18,108, fetch-loading 4,362, wcag-compliant-accessible-library 1,317, accessible-color-contrast 880. Busiest month: Jun 2026 with 1,798 downloads." width="100%" />
 </picture>
 
 <!-- NPM_DOWNLOADS:end -->
