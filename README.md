@@ -80,7 +80,7 @@ How often my npm packages are downloaded per month:
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="github-stats/stats-dark.svg" />
-    <img src="github-stats/stats-light.svg" alt="My GitHub statistics, all time since Jul 2023: Stars earned: 105, Commits: 5,478, Pull requests: 168, Issues: 224, Pull request reviews: 1,657, Contributed to (repositories): 58. Rank A (Top 16 %), calculated like on github-readme-stats." width="100%" />
+    <img src="github-stats/stats-light.svg" alt="My GitHub statistics, all time since Jul 2023: Stars earned: 107, Commits: 5,479, Pull requests: 168, Issues: 224, Pull request reviews: 1,657, Contributed to (repositories): 58. Rank A (Top 15 %), calculated like on github-readme-stats." width="100%" />
 </picture>
 
 <!-- GITHUB_STATS:end -->
