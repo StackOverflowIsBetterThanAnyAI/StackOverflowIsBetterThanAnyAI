@@ -91,7 +91,7 @@ How often my npm packages are downloaded per month:
 
 <picture>
     <source media="(prefers-color-scheme: dark)" srcset="language-history/ranking-dark.svg" />
-    <img src="language-history/ranking-light.svg" alt="Bar chart of the languages I write the most, measured by the lines of code I changed: TypeScript 79.6 % (212,320 lines), JavaScript 12.4 % (33,027 lines), Python 2.8 % (7,465 lines), CSS 2.6 % (6,905 lines), PHP 1.1 % (3,014 lines), HTML 1.1 % (2,823 lines), Dockerfile 0.1 % (367 lines), C++ 0.1 % (297 lines), Java 0.1 % (291 lines), Other &#60;0.1 % (177 lines)." width="100%" />
+    <img src="language-history/ranking-light.svg" alt="Bar chart of the languages I write the most, measured by the lines of code I changed: TypeScript 78.9 % (212,320 lines), JavaScript 12.3 % (33,027 lines), Python 2.8 % (7,465 lines), CSS 2.6 % (6,905 lines), PHP 1.1 % (3,014 lines), HTML 1.0 % (2,823 lines), C++ 0.9 % (2,471 lines), Dockerfile 0.1 % (367 lines), C 0.1 % (349 lines), Other 0.2 % (468 lines)." width="100%" />
 </picture>
 
 <!-- LANGUAGE_RANKING:end -->
